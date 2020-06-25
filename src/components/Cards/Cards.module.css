@@ -1,0 +1,35 @@
+.container{
+    margin: 50px 0;
+}
+
+.infectedCard{
+    background-color:rgba(0, 0, 255, 0.5);
+}
+
+.recoveredCard{
+    background-color:rgba(0, 255, 0, 0.5);
+}
+
+.deathsCard{
+    background-color:rgba(255, 0, 0, 0.5);
+}
+
+.infectedCount{
+    color: rgba(0, 0, 255, 0.8);
+}
+
+.recoveredCount{
+    color: rgba(0, 255, 0, 0.8);
+}
+
+.deathsCount{
+    color: rgba(255, 0, 0, 0.8);
+}
+
+
+@media (max-width: 770px) {
+    .card {
+        margin: 10% 0 !important;
+    }
+
+    }
