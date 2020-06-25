@@ -14,7 +14,7 @@ const PieChart = ({data : {confirmed, deaths, recovered}, country}) => {
     },[]);
   
     const barChart = (
-        confirmed 
+      dailyData.length 
         ? (
         <Pie
           data={{
