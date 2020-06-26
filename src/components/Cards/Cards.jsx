@@ -15,11 +15,11 @@ const Cards = ({ data, value, index }) => {
         return (<Rotating />);
     }
 
-    const lastUpdated = lastUpdate ? (<Typography variant="caption" display="block" align='center'>
+    const lastUpdated = lastUpdate ? (<Typography  variant="caption" display="block" align='center'>
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
 
-const stillActive = confirmed ? (<Typography variant="caption" display="block" align='center'>
+const stillActive = confirmed ? (<Typography className='active' variant="caption" display="block" align='center'>
 Active cases : { (confirmed.value - ( recovered.value + deaths.value )).toLocaleString() } 
 </Typography>) : null;
 

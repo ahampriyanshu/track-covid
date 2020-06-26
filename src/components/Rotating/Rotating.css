@@ -1,3 +1,9 @@
+.rotating {
+    height: 128px;
+    width: 128px;
+  }
+  
+
 @-webkit-keyframes rotating  {
   from {
     -webkit-transform: rotate(0deg);
@@ -34,4 +40,14 @@
   -ms-animation: rotating 2s linear infinite;
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
+}
+
+
+@media only screen and (max-width: 770px) {
+
+    .rotating {
+        height: 64px;
+        width: 64px;
+      }
+
 }

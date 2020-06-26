@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+.active{
+    color:rgba(255, 0, 0, 0.8) !important;
+}
+
 .grid-container {
     margin-top: 0.01vh !important;
 }
