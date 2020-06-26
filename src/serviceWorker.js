@@ -47,27 +47,6 @@ export function register(config) {
           );
         });
       } else {
-        // Check update
-        ServiceWorkerRegistration.onupdatefound = () => {
-          // Check if online
-          if (navigator.onLine) {
-            // Delete cache
-            caches.keys()
-              .then(function(names) {
-                for (let name of names)
-                    caches.delete(name);
-              })
-
-              .then(() => {
-                window.location.reload(true);
-              })
-
-              .then(() => {
-                registerValidSW(swUrl, config);
-              });
-          }
-        }
-        
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
       }
@@ -122,7 +101,7 @@ function registerValidSW(swUrl, config) {
 function checkValidServiceWorker(swUrl, config) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {
-    headers: { 'Service-Worker': 'script' }
+    headers: { 'Service-Worker': 'script' },
   })
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
@@ -151,8 +130,12 @@ function checkValidServiceWorker(swUrl, config) {
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    });
+    navigator.serviceWorker.ready
+      .then(registration => {
+        registration.unregister();
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
   }
 }

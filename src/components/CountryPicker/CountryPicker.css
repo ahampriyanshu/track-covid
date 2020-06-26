@@ -1,0 +1,11 @@
+.cntry-container {
+    width: 25%;
+    margin-top: 2% !important;
+    margin-bottom: 0% !important;
+}
+
+@media only screen and (max-width: 770px) {
+    .cntry-container {
+        width: 60%;
+    }
+}

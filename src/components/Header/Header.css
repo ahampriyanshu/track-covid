@@ -1,0 +1,16 @@
+.headerCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 40%;
+    /* margin-top: 2%; */
+}
+
+@media only screen and (max-width: 770px) {
+    .image {
+      width: 100%;
+    }
+} 

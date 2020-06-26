@@ -1,0 +1,56 @@
+.card-container {
+    margin: 2% 0;
+    width: 100%;
+}
+
+.grid-container {
+    margin-top: 0.01vh !important;
+}
+
+.card-card {
+    margin: 2% 2% !important;
+}
+
+.card-content {
+    margin: 1% 1% !important;
+}
+
+.card-infected {
+    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+}
+
+.card-recovered {
+    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+}
+
+.card-deaths {
+    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 770px) {
+    .card-card {
+      margin: 2% 2% !important;
+    }
+    
+    .card-heading {
+        font-size: 3vw !important;
+    }
+    
+    .card-curdata {
+        font-size: 4vw !important;
+    }
+
+    .card-content {
+        padding-bottom: 0px !important;
+        padding: 0px !important;
+        margin: 0% 0% !important;
+    }
+
+    .MuiCardContent-root:last-child {
+        padding-bottom: 0px !important;
+    }
+
+    .MuiCardContent-root {
+        padding: 0px !important;
+    }
+}

@@ -1,0 +1,34 @@
+.datatable-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.paper {
+    width: 60%;
+    /* margin-left: 1%; */
+}
+
+.t-head {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 770px) {
+    .datatable-container{
+        font-size: 40px !important;
+    }
+    .paper{
+        width: 100%;
+    }
+    .table-cell {
+        padding-left: 0.05vw !important;
+        padding-right: 0.05vw !important;
+        font-size: 2.5vw !important;
+    }
+    .t-head {
+        font-size: 2.5vw !important;
+    }
+}

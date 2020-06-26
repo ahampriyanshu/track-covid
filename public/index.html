@@ -3,11 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -16,8 +11,13 @@
       name="description"
       content="Track covid-19 data using react through axios"
     />
-
-
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 <!-- Manifest.json  -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -35,22 +35,6 @@
     <title>Covid-Tracker</title>
   </head>
   <body>
-      <nav>
-        <div class="nav-wrapper">
-            &emsp;&emsp;<a href="#!" class="brand-logo">Manifest Generator</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Github</a></li>
-                <li><a href="badges.html">sw.js</a></li>
-                <li><a href="collapsible.html">Install</a></li>
-            </ul>
-        </div>
-    </nav>
-        <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Github</a></li>
-        <li><a href="badges.html">sw.js</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-    </ul>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -64,30 +48,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-            <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, options);
-
-            var option = document.querySelectorAll('select');
-            var instances_option = M.FormSelect.init(option, options);
-        });
-
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });
-
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
-
-
-        $(document).ready(function () {
-            M.updateTextFields();
-        });
-
-    </script>
   </body>
 </html>

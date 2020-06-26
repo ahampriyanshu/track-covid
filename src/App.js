@@ -1,41 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { Cards, Chart, CountryPicker, PieChart, SelectionTabs } from './components';
-import styles from './App.module.css';
-import { fetchData } from './api'
-import logo from './images/image.png'
+import './App.css';
+import { Header , SelectionTabs } from './components';
+// import { fetchTNData } from './api';
 
-class App extends React.Component {
-    state = {
-        data: {},
-        country: '',
-    }
+class App extends Component {
 
-async componentDidMount(){
-    const fetchedData = await fetchData();
-    
-    this.setState({ data: fetchedData});
-}
+  // async componentDidMount() {
+  //   const data = await fetchTNData();
+  //   console.log("App -> componentDidMount -> data", data)
+  // }
 
-handleCountryChange = async(country) => {
-    const fetchedData = await fetchData(country);
-
-    this.setState({ data: fetchedData, country: country });
-}
-
-    render(){
-        const { data, country } = this.state;
-
-        return (
-            <div className={styles.container}>
-                <img className={styles.image} src={logo} alt="Logo of this PWa" />
-                <Cards data={ data }/> 
-                <PieChart data={ data }/>
-                <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="container">
+        <Header />
+        <SelectionTabs />
+      </div>
+    );
+  }
 }
 
 export default App;

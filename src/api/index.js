@@ -1,64 +1,95 @@
 import axios from 'axios';
 
-const url = 'https://covid19.mathdro.id/api';
+const apiUrl = 'https://api.covid19india.org';
 
-const newUrl = 'https://api.covid19api.com/summary';
+const cntryApiUrl = 'https://covid19.mathdro.id/api';
 
-export const newData = async () =>
-{
-    try{
-        const { newdata: { Global } } = await axios.get(newUrl);
-
-        return { Global };
-
-    }catch(error){
-        console.log("New data is empty");
-        
-    } 
+export const fetchIndiaData = async () => {
+    try {
+        const {data : {statewise}}  = await axios.get(`${apiUrl}/data.json`);
+        // const stateData = data.filter((state) => state.state === "Tamil Nadu")
+        const stateData = statewise.filter((a, b) => a.state!=='Total')
+            .sort((a, b) => parseInt(b.confirmed) - parseInt(a.confirmed))
+            .map(({ state, confirmed, active, recovered,
+                deaths, lastupdatedtime, deltaconfirmed, deltadeaths, deltarecovered}) => {
+                return {
+                    stateName: state,
+                    confirmed: parseInt(confirmed),
+                    active: parseInt(active),
+                    recovered: parseInt(recovered),
+                    deaths: parseInt(deaths),
+                    deltaconfirmed: parseInt(deltaconfirmed),
+                    deltarecovered: parseInt(deltarecovered),
+                    deltadeaths: parseInt(deltadeaths),
+                    lastUpdated: lastupdatedtime
+                }
+            });
+        const totData = statewise.filter((a, b) => a.state==='Total')
+            .map(({  confirmed, recovered,
+                deaths, deltaconfirmed, deltadeaths, deltarecovered}) => {
+                    return {
+                        confirmed: {value: parseInt(confirmed)},
+                        recovered: {value: parseInt(recovered)},
+                        deaths: {value: parseInt(deaths)},
+                        deltaconfirmed: parseInt(deltaconfirmed),
+                        deltarecovered: parseInt(deltarecovered),
+                        deltadeaths: parseInt(deltadeaths),
+                    }
+                });
+        return { stateData, totData };
+    } catch (error) {
+        console.log("fetchTNData -> error", error);
+    }
 }
 
-export const fetchData = async (country) => {
-
-    let changeableUrl = url; 
-
-    if(country){
-        changeableUrl = `${url}/countries/${country}`
+export const fetchIndiaGraphData = async () => {
+    try {
+        const {data : {cases_time_series}}  = await axios.get(`${apiUrl}/data.json`);
+        // const stateData = data.filter((state) => state.state === "Tamil Nadu")
+        const graphData = cases_time_series
+            .map(({ dailyconfirmed, dailydeceased, dailyrecovered, date}) => {
+                return {
+                    date,
+                    confirmed: parseInt(dailyconfirmed),
+                    recovered: parseInt(dailyrecovered),
+                    deaths: parseInt(dailydeceased),
+                }
+            });
+        return graphData;
+    } catch (error) {
+        console.log("fetchIndiaGraphData -> error", error);
     }
+}
 
-    try{
+export const fetchCntryData = async (country) => {
+    let changeableUrl = !country ? cntryApiUrl : `${cntryApiUrl}/countries/${country}`;
+    try {
         const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableUrl);
-
         return { confirmed, recovered, deaths, lastUpdate };
-
-    }catch(error){
-        console.log("Empty data supplied to cards");
-        
+    } catch (error) {
+        console.log("fetchCntryData -> error", error)
     }
 }
 
 export const fetchDailyData = async () => {
     try {
-     const { data } = await axios.get(`${url}/daily`);   
-
-    const modifiedData = data.map((dailyData) => ({
-        confirmed : dailyData.confirmed.total,
-        deaths: dailyData.deaths.total,
-        date: dailyData.reportDate,
-    }));
-
-    return modifiedData;
-
+        const { data } = await axios.get(`${cntryApiUrl}/daily`);
+        const modifiedData = data.map(dailyData => ({
+            confirmed: dailyData.confirmed.total,
+            deaths: dailyData.deaths.total,
+            date: dailyData.reportDate
+        }));
+        return modifiedData;
     } catch (error) {
-        console.log("Empty data supplied to chart");
+        console.log("fetchDailyData -> error", error)
     }
 }
 
 export const fetchCountries = async () => {
     try {
-        const {data :{ countries }} = await axios.get(`${url}/countries`);  
-
-    return countries.map((country) => country.name);
+        const {data: {countries}} = await axios.get(`${cntryApiUrl}/countries`);
+        return countries;
     } catch (error) {
-        console.log("Empty data supplied to the country picker");
+        console.log("fetchCountries -> error", error)
     }
 }

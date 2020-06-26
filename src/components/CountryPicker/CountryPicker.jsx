@@ -1,29 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { MenuItem, FormControl, Select } from '@material-ui/core';
+import { Select, FormControl, MenuItem } from '@material-ui/core';
 
+import './CountryPicker.css';
 import { fetchCountries } from '../../api';
 
-import styles from './CountryPicker.module.css';
+const CountryPicker = ({ handleCountryChange, value, index }) => {
 
-const Countries = ({ handleCountryChange }) => {
-  const [countries, setCountries] = useState([]);
+    const [countries, setCountries] = useState([]);
 
-  useEffect(() => {
-    const fetchAPI = async () => {
-      setCountries(await fetchCountries());
-    };
+    useEffect(() => {
+        const fetchCntrs = async () => {
+            setCountries(await fetchCountries())
+        }
 
-    fetchAPI();
-  }, []);
+        fetchCntrs();
+    }, []);
+    
+    if (value !== index) return null;
 
-  return (
-    <FormControl className={styles.formControl}>
-      <Select displayEmpty defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
-        <MenuItem value=""><em>Global</em></MenuItem>
-        {countries.map((country, i) => <MenuItem key={i} value={country}>{country}</MenuItem>)}
-      </Select>
-    </FormControl>
-  );
-};
+    const cntryLst = countries ?
+        countries.map((country, i) => <MenuItem value={country.name} key={i}>{country.name}</MenuItem>)
+        : null;
 
-export default Countries;
+    return (
+        <FormControl className="cntry-container">
+            <Select displayEmpty defaultValue="" onChange={e => handleCountryChange(e.target.value)}>
+                <MenuItem value="" key="global"><em>Global</em></MenuItem>
+                {cntryLst}
+            </Select>
+        </FormControl>
+    );
+}
+
+export default CountryPicker;
