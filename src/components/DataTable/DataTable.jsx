@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel, Paper, makeStyles, Typography } from '@material-ui/core';
 import CountUp from 'react-countup';
-
+import Rotating from '../Rotating/Rotating.jsx';
 import './DataTable.css';
 import { getComparator, stableSort } from '../../utils';
 
@@ -46,10 +46,8 @@ const DataTable = ({ data, value, index }) => {
 
     const tableData = data && !data.length ? (
         <TableRow>
-            <TableCell align="center" colSpan={5}>
-                <Typography variant="button" display="block" align='center'>
-                    Loading...
-                </Typography>
+            <TableCell align="center" colSpan={6}>
+                <Rotating />
             </TableCell>
         </TableRow>) :
         stableSort(data, getComparator(order, orderBy))
@@ -62,21 +60,25 @@ const DataTable = ({ data, value, index }) => {
                             {stateName}
                         </TableCell>
                         <TableCell align="right" className="table-cell">
-                            {deltaconfirmed > 0 ?  <Typography>+{deltaconfirmed}</Typography> : null}
+                            {deltaconfirmed > 0 ?  <Typography className='counterConfirmed' >+{deltaconfirmed}</Typography> : null}
                             <CountUp start={0} end={confirmed ? confirmed : 0} duration={2.5} separator="," />
                         </TableCell>
                         <TableCell align="right" className="table-cell">
-                            {deltarecovered > 0 ?  <Typography>+{deltarecovered}</Typography> : null}
+                            {deltarecovered > 0 ?  <Typography className='counterRecovered' >+{deltarecovered}</Typography> : null}
                             <CountUp start={0} end={recovered ? recovered : 0} duration={2.5} separator="," />
                         </TableCell>
                         <TableCell align="right" className="table-cell">
-                            {deltadeaths > 0 ?  <Typography>+{deltadeaths}</Typography> : null}
+                            {deltadeaths > 0 ?  <Typography className='counterDeaths' >+{deltadeaths}</Typography> : null}
                             <CountUp start={0} end={deaths ? deaths : 0} duration={2.5} separator="," />
                         </TableCell>
                     </TableRow>
                 )
-            });
-        
+            }); 
+
+            const lastUpdated = lastUpdate ? (<Typography variant="caption" display="block" align='center'>
+            Last Updated at {lastUpdate} IST
+            </Typography>) : null;   
+              
     const handleSort = (property) => (event) => {
         const isAsc = orderBy === property && order === 'asc';
         setOrder(isAsc ? 'desc' : 'asc');
@@ -87,6 +89,9 @@ const DataTable = ({ data, value, index }) => {
         <div className="datatable-container">
             <Paper className="paper" elevation={3}>
                 <TableContainer>
+                <br />
+                    {lastUpdated}
+                    <br />
                     <Table size='small' stickyHeader >
                         <TableHead>
                             <TableRow>

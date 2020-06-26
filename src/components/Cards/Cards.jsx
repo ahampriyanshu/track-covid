@@ -15,9 +15,13 @@ const Cards = ({ data, value, index }) => {
         return (<Rotating />);
     }
 
-    const lastUpdated = (index === 2 || index === 0) ? (<Typography variant="caption" display="block" align='center'>
+    const lastUpdated = lastUpdate ? (<Typography variant="caption" display="block" align='center'>
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
+
+const stillActive = confirmed ? (<Typography variant="caption" display="block" align='center'>
+Active cases : { (confirmed.value - ( recovered.value + deaths.value )).toLocaleString() } 
+</Typography>) : null;
 
 const pieChart = (
     confirmed 
@@ -35,7 +39,6 @@ const pieChart = (
               data:[confirmed.value - ( recovered.value + deaths.value ), recovered.value, deaths.value]
             }]
         }}
-
       />
     ) : null
     );
@@ -74,9 +77,12 @@ const pieChart = (
             </Grid>
             <Grid container  justify="center" >
             <Grid item  xs={12} md={3} >
+                <br />
             { pieChart }
             </Grid>
             </Grid>
+            <br />
+            {stillActive}
             {lastUpdated}
         </div>
     );

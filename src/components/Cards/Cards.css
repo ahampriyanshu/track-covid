@@ -17,17 +17,17 @@
 
 .card-infected {
     background-color: rgba(0, 0, 255, 0.5) !important;
-    color:whitesmoke !important;    
+    color:white !important;    
 }
 
 .card-recovered {
     background-color: rgba(0, 255, 0, 0.7) !important;
-    color:whitesmoke !important;
+    color:white !important;
 }
 
 .card-deaths {
     background-color: rgba(255, 0, 0, 0.5) !important;
-    color:whitesmoke !important;
+    color:white !important;
 }
 
 @media only screen and (max-width: 770px) {

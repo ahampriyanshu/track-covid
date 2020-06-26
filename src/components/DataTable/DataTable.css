@@ -7,6 +7,19 @@
     margin-bottom: 2%;
 }
 
+.counterConfirmed{
+    color: rgba(0, 0, 255, 0.8);
+}
+
+.counterRecovered{
+    color: rgba(0, 255, 0, 0.8);
+}
+
+.counterDeaths{
+    color: rgba(255, 0, 0, 0.8);
+}
+
+
 .paper {
     width: 60%;
     /* margin-left: 1%; */

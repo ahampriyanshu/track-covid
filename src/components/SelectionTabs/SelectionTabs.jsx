@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Paper, Tabs, Tab} from '@material-ui/core';
 import * as Icon from 'react-feather';
 import PublicIcon from '@material-ui/icons/Public';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+
 import './SelectionTabs.css';
 import DataTable from '../DataTable/DataTable.jsx';
 import Chart from '../Chart/Chart.jsx';
