@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
+import Rotating from '../Rotating/Rotating.jsx';
 import './Cards.css';
-import * as Icon from 'react-feather';
 import { Pie } from 'react-chartjs-2';
 
 const Cards = ({ data, value, index }) => {
@@ -12,9 +12,7 @@ const Cards = ({ data, value, index }) => {
             = (data && index === 1 && data.totData) ? data.totData[0] : data;
 
     if (!confirmed) {
-        return (<Typography variant="button" display="block" align='center'>
-                    Loading...
-                </Typography>);
+        return (<Rotating />);
     }
 
     const lastUpdated = (index === 2 || index === 0) ? (<Typography variant="caption" display="block" align='center'>
@@ -26,7 +24,7 @@ const pieChart = (
       ? (
       <Pie
         data={{
-          labels: ['Ongoing', 'Recovered', 'Deaths'],
+          labels: ['Active', 'Recovered', 'Deaths'],
           datasets: [{
               label: 'People', 
               backgroundColor: [
@@ -75,7 +73,7 @@ const pieChart = (
                 </Grid>
             </Grid>
             <Grid container  justify="center" >
-            <Grid item  xs={12} md={4} >
+            <Grid item  xs={12} md={3} >
             { pieChart }
             </Grid>
             </Grid>

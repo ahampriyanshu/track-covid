@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Paper, Tabs, Tab} from '@material-ui/core';
+import * as Icon from 'react-feather';
 import PublicIcon from '@material-ui/icons/Public';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -70,8 +71,8 @@ const SelectionTabs = () => {
                     onChange={handleChange}
                     centered
                 >
-                    <Tab icon={<GitHubIcon />} label="About" />
-                    <Tab icon={<FavoriteIcon />} label="Home" />
+                    <Tab icon={<Icon.Activity />} label="About" />
+                    <Tab icon={<Icon.Home />} label="Home" />
                     <Tab icon={<PublicIcon />} label="World" />
                 </Tabs>
             </Paper>
