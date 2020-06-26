@@ -76,7 +76,7 @@ const DataTable = ({ data, value, index }) => {
                     </TableRow>
                 )
             });
-
+        
     const handleSort = (property) => (event) => {
         const isAsc = orderBy === property && order === 'asc';
         setOrder(isAsc ? 'desc' : 'asc');

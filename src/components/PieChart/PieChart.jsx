@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import {  Typography } from '@material-ui/core';
+import {  Typography,Grid } from '@material-ui/core';
 
 const PieChart = ({ data, value, index }) => {
   if (value !== index) return null;
@@ -40,7 +40,9 @@ const PieChart = ({ data, value, index }) => {
 
       return(
         <div>
+<Grid>
         { pieChart }
+        </Grid>
         </div>
     )
     }

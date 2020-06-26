@@ -16,15 +16,18 @@
 }
 
 .card-infected {
-    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+    background-color: rgba(0, 0, 255, 0.5) !important;
+    color:whitesmoke !important;    
 }
 
 .card-recovered {
-    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+    background-color: rgba(0, 255, 0, 0.7) !important;
+    color:whitesmoke !important;
 }
 
 .card-deaths {
-    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.5) !important;
+    color:whitesmoke !important;
 }
 
 @media only screen and (max-width: 770px) {

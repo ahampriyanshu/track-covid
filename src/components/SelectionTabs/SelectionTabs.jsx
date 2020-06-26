@@ -75,7 +75,7 @@ const SelectionTabs = () => {
                     <Tab icon={<FavoriteIcon />} label="Home" />
                     <Tab icon={<PublicIcon />} label="World" />
                 </Tabs>
-            
+            </Paper>
   
         
   
@@ -87,7 +87,7 @@ const SelectionTabs = () => {
             <Cards data={data} value={value} index={2} />
             <PieChart data={data} value={value} index={2} />
             <Chart value={value} index={2} graphData={graphData} country={country} />
-            </Paper>
+          
         </div>
     );
 }
