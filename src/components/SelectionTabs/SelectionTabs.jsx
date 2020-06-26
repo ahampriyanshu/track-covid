@@ -6,7 +6,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import './SelectionTabs.css';
 import DataTable from '../DataTable/DataTable.jsx';
 import Chart from '../Chart/Chart.jsx';
-import PieChart from '../PieChart/PieChart.jsx'
 import CountryPicker from '../CountryPicker/CountryPicker.jsx';
 import Cards from '../Cards/Cards.jsx';
 import {  fetchIndiaData, fetchIndiaGraphData,
@@ -80,12 +79,12 @@ const SelectionTabs = () => {
         
   
             <Cards data={data} value={value} index={1} />
-            <PieChart data={data} value={value} index={1} />
+     
             <DataTable value={value} index={1} data={data} />
             <Chart value={value} index={1} graphData={graphData} />
             <CountryPicker handleCountryChange={handleCountryChange} value={value} index={2} />
             <Cards data={data} value={value} index={2} />
-            <PieChart data={data} value={value} index={2} />
+      
             <Chart value={value} index={2} graphData={graphData} country={country} />
           
         </div>

@@ -3,6 +3,7 @@ import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
 import './Cards.css';
 import * as Icon from 'react-feather';
+import { Pie } from 'react-chartjs-2';
 
 const Cards = ({ data, value, index }) => {
     if (value !== index) return null;
@@ -19,6 +20,29 @@ const Cards = ({ data, value, index }) => {
     const lastUpdated = (index === 2 || index === 0) ? (<Typography variant="caption" display="block" align='center'>
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
+
+const pieChart = (
+    confirmed 
+      ? (
+      <Pie
+        data={{
+          labels: ['Ongoing', 'Recovered', 'Deaths'],
+          datasets: [{
+              label: 'People', 
+              backgroundColor: [
+                'rgba(0, 0, 255, 0.5)',
+                'rgba(0, 255, 0, 0.5)',
+                'rgba(255, 0, 0, 0.5)',
+              ],
+              data:[confirmed.value - ( recovered.value + deaths.value ), recovered.value, deaths.value]
+            }]
+        }}
+
+      />
+    ) : null
+    );
+
+
     return (
         <div className="card-container">
             <Grid container spacing={3} justify="center" className="grid-container">
@@ -49,6 +73,11 @@ const Cards = ({ data, value, index }) => {
                         {deltadeaths > 0 ? <Typography>+{deltadeaths}</Typography> : null}
                     </CardContent>
                 </Grid>
+            </Grid>
+            <Grid container  justify="center" >
+            <Grid item  xs={12} md={4} >
+            { pieChart }
+            </Grid>
             </Grid>
             {lastUpdated}
         </div>
