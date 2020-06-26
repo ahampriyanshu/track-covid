@@ -50,6 +50,7 @@ const Cards = ({ data, value, index }) => {
                     </CardContent>
                 </Grid>
             </Grid>
+            {lastUpdated}
         </div>
     );
 }

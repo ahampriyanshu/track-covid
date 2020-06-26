@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import {  Typography, Grid } from '@material-ui/core';
+import {  Typography } from '@material-ui/core';
 
 const PieChart = ({ data, value, index }) => {
   if (value !== index) return null;

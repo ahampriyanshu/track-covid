@@ -12,7 +12,9 @@
 }
 
 .tabs {
-
+ background-color: rgb(244, 246, 248);
+ border: none;
+ margin: unset;
 }
 
 .react-swipeable-view-container>div {
