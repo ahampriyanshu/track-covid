@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider, Paper } from '@material-ui/core';
 import './App.css';
-import { Header , SelectionTabs } from './components';
+import { Header , SelectionTabs, Footer } from './components';
 
 const theme = createMuiTheme({
   palette: {
@@ -15,15 +15,15 @@ class App extends Component {
 
   render() {
     return (
-      <ThemeProvider theme={theme}>
-<Paper>
       <div className="container">
-        <Header />
-        <SelectionTabs />
-       
-      </div>
+      <ThemeProvider theme={theme}>
+      <Paper>
+      <Header />
+      <SelectionTabs />
+      <Footer />
       </Paper>
       </ThemeProvider>
+      </div>
     );
   }
 }
