@@ -8,22 +8,20 @@ import { Pie } from 'react-chartjs-2';
 const Cards = ({ data, value, index }) => {
     if (value !== index) return null;
 
-    const { confirmed, recovered, deaths, lastUpdate, lastUpdatetot,deltaconfirmed, deltadeaths, deltarecovered, news} 
+    const { confirmed, recovered, deaths, lastUpdate, lastUpdatetot,deltaconfirmed, deltadeaths, deltarecovered} 
             = (data && index === 1 && data.totData) ? data.totData[0] : data;
 
     if (!confirmed) {
         return (<Rotating />);
     }
 
-    const lastUpdated = lastUpdate ? (<Typography  variant="caption" display="block" align='center'>
+    const lastUpdated = lastUpdate ? (<Typography  variant="h6" className="random date" display="block" align='center'>
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
 
 const lastUpdatedTime = lastUpdatetot ? (<Typography  className="random date" variant="h6" display="block" align='center'>
 Last Updated at {lastUpdatetot} IST
 </Typography>) : null; 
-
-console.log(news);
 
 const stillActive = confirmed ? (<Typography className='active' variant="h6" display="block" align='center'>
 Active Cases left { (confirmed.value - ( recovered.value + deaths.value )).toLocaleString() } 
@@ -45,13 +43,13 @@ const pieChart = (
               data:[confirmed.value - ( recovered.value + deaths.value ), recovered.value, deaths.value]
             }]
         }}
-      />
-    ) : null
-    );
-
-
-    return (
-        <div className="card-container">
+        />
+        ) : null
+        );
+        
+        
+        return (
+            <div className="card-container">
             <Grid container spacing={3} justify="center" className="grid-container">
                 <Grid item component={Card} xs={3} md={3} className="card-card card-infected">
                     <CardContent align='center' className="card-content">
@@ -81,6 +79,10 @@ const pieChart = (
                     </CardContent>
                 </Grid>
             </Grid>
+            <br />
+            {lastUpdated}
+            {lastUpdatedTime}
+            <br />
             <Grid container  justify="center" >
             <Grid item  xs={12} md={4} >
             { pieChart }
@@ -88,8 +90,6 @@ const pieChart = (
             </Grid>
             <br />
             {stillActive}
-            {lastUpdated}
-            {lastUpdatedTime}
         </div>
     );
 }

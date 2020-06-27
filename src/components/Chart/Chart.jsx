@@ -32,12 +32,14 @@ const Chart = ({ graphData, value, index, country }) => {
             data: graphData.map(({ confirmed }) => confirmed),
             label: 'Confirmed',
             borderColor: 'rgba(0, 0, 255, 0.5)',
-            fill: true
+            fill: true,
+            backgroundColor:'rgba(0, 0, 255, 0.4)'
         }, {
             data: graphData.map(({ deaths }) => deaths),
             label: 'Deceased',
-            borderColor: 'rgba(255, 0, 0, 0.5)',
-            fill: true
+            borderColor: 'rgba(255, 0, 0, 1)',
+            fill: true,
+            backgroundColor:'rgba(255, 0, 0, 1)'
         }];
         title = `Daily Cases Growth`;
     } else if (index === 2 && !isGraphDataArr) {
@@ -104,7 +106,21 @@ const Chart = ({ graphData, value, index, country }) => {
             }}
             options={{
                 legend: { display: false },
-                title: { display: true, text: title }
+                title: { display: true, text: title },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false,
+                            drawBorder:false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false,
+                            drawBorder:false,
+                        }
+                    }]
+                },
             }} /> : null;
 
     return (

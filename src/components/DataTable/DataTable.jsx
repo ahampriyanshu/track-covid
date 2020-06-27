@@ -75,9 +75,6 @@ const DataTable = ({ data, value, index }) => {
                 )
             }); 
 
-            const lastUpdated = lastUpdate ? (<Typography  className="random date" variant="h6" display="block" align='center'>
-            Last Updated at {lastUpdate} IST
-            </Typography>) : null;   
               
     const handleSort = (property) => (event) => {
         const isAsc = orderBy === property && order === 'asc';
@@ -89,8 +86,6 @@ const DataTable = ({ data, value, index }) => {
         <div className="datatable-container">
             <Paper  className="paper" elevation={0}>
                 <TableContainer className="random" >
-                    {lastUpdated}
-                    <br />
                     <Table className="table" size='small' stickyHeader >
                         <TableHead>
                             <TableRow>

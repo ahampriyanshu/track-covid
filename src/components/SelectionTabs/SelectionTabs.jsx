@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Paper, Tabs, Tab} from '@material-ui/core';
 import * as Icon from 'react-feather';
 import PublicIcon from '@material-ui/icons/Public';
-
 import './SelectionTabs.css';
+import News from '../News/News';
 import DataTable from '../DataTable/DataTable.jsx';
 import Chart from '../Chart/Chart.jsx';
 import CountryPicker from '../CountryPicker/CountryPicker.jsx';
@@ -77,7 +77,7 @@ const SelectionTabs = () => {
             </Paper>
   
         
-  
+            <News data={data} value={value} index={0} />
             <Cards data={data} value={value} index={1} />
             <Chart value={value} index={1} graphData={graphData} />
             <DataTable value={value} index={1} data={data} />
