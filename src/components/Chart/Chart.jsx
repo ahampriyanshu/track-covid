@@ -56,10 +56,44 @@ const Chart = ({ graphData, value, index, country }) => {
         graphData && graphData[0] ?
             <Line data={{
                 labels: graphData.map(({ date }) => date),
-                datasets: dataset
+                datasets: dataset,
+                fill:false,
             }} 
             options={{
-                title: { display: true, text: title }
+                title: { display: true, text: title },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false,
+                            display:false,
+                            drawBorder:false,
+                            zeroLineWidth:0
+                        },
+                        ticks: {
+                            display: false,
+                            autoSkip: true
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            drawOnChartArea: false,
+                            display:false,
+                            drawBorder:false,
+                            zeroLineWidth:0
+                        },
+                        ticks: {
+                            display: false,
+                            autoSkip: true
+                        }
+                    }]
+                },
+                elements: { 
+                    point: { 
+                      radius: 0,
+                      hitRadius: 10, 
+                      hoverRadius: 5,
+                    } 
+                  } 
             }}/> : null
     );
 

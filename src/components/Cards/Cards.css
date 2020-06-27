@@ -9,7 +9,7 @@
 
 .active {
     font-family: 'Courier New', Courier, monospace !important;
-  color: rgba(255, 0, 0, 0.8) !important;
+    color: rgba(0, 0,255,0.8) !important;
 }
 
 .grid-container {

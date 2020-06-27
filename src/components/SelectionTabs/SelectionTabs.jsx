@@ -79,8 +79,8 @@ const SelectionTabs = () => {
         
   
             <Cards data={data} value={value} index={1} />
-            <DataTable value={value} index={1} data={data} />
             <Chart value={value} index={1} graphData={graphData} />
+            <DataTable value={value} index={1} data={data} />
             <CountryPicker handleCountryChange={handleCountryChange} value={value} index={2} />
             <Cards data={data} value={value} index={2} />     
             <Chart value={value} index={2} graphData={graphData} country={country} />

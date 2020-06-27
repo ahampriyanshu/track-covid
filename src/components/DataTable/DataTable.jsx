@@ -75,7 +75,7 @@ const DataTable = ({ data, value, index }) => {
                 )
             }); 
 
-            const lastUpdated = lastUpdate ? (<Typography  className="random" variant="caption" display="block" align='center'>
+            const lastUpdated = lastUpdate ? (<Typography  className="random date" variant="h6" display="block" align='center'>
             Last Updated at {lastUpdate} IST
             </Typography>) : null;   
               
