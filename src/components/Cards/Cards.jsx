@@ -19,7 +19,7 @@ const Cards = ({ data, value, index }) => {
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
 
-const stillActive = confirmed ? (<Typography className='active' variant="caption" display="block" align='center'>
+const stillActive = confirmed ? (<Typography className='active' variant="h5" display="block" align='center'>
 Active cases : { (confirmed.value - ( recovered.value + deaths.value )).toLocaleString() } 
 </Typography>) : null;
 
@@ -49,34 +49,34 @@ const pieChart = (
             <Grid container spacing={3} justify="center" className="grid-container">
                 <Grid item component={Card} xs={3} md={3} className="card-card card-infected">
                     <CardContent align='center' className="card-content">
-                        <Typography color="textSecondary" gutterBottom className="card-heading">Confirmed</Typography>
-                        <Typography variant="h3" className="card-curdata">
+                        <Typography className="card-heading">Confirmed</Typography>
+                        <Typography variant="h3" className="card-data">
                             <CountUp start={0} end={confirmed.value} duration={2.5} separator="," />
                         </Typography>
-                        {deltaconfirmed > 0 ? <Typography className='increaseCounter' >+{deltaconfirmed}</Typography> : null}
+                        {deltaconfirmed > 0 ? <Typography variant='h5' className="card-delta" >+{deltaconfirmed}</Typography> : null}
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={3} md={3} className="card-card card-recovered">
                     <CardContent align='center'>
-                        <Typography color="textSecondary" gutterBottom className="card-heading">Recovered</Typography>
-                        <Typography variant="h3" className="card-curdata">
+                        <Typography className="card-heading">Recovered</Typography>
+                        <Typography variant="h3" className="card-data">
                             <CountUp start={0} end={recovered.value} duration={2.5} separator="," />
                         </Typography>
-                        {deltarecovered > 0 ? <Typography>+{deltarecovered}</Typography>  : null}
+                        {deltarecovered > 0 ? <Typography variant='h5' className="card-delta" >+{deltarecovered}</Typography>  : null}
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={3} md={3} className="card-card card-deaths">
                     <CardContent align='center'>
-                        <Typography color="textSecondary" gutterBottom className="card-heading">Deceased</Typography>
-                        <Typography variant="h3" className="card-curdata">
+                        <Typography className="card-heading">Deceased</Typography>
+                        <Typography variant="h3" className="card-data">
                             <CountUp start={0} end={deaths.value} duration={2.5} separator="," />
                         </Typography>
-                        {deltadeaths > 0 ? <Typography>+{deltadeaths}</Typography> : null}
+                        {deltadeaths > 0 ? <Typography variant='h5' className="card-delta" >+{deltadeaths}</Typography> : null}
                     </CardContent>
                 </Grid>
             </Grid>
             <Grid container  justify="center" >
-            <Grid item  xs={12} md={3} >
+            <Grid item  xs={12} md={6} >
                 <br />
             { pieChart }
             </Grid>

@@ -1,63 +1,72 @@
 .card-container {
-    margin: 2% 0;
-    width: 100%;
+  margin: 2% 0;
+  width: 100%;
 }
 
-.active{
-    color:rgba(255, 0, 0, 0.8) !important;
+.card-heading {
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+
+.active {
+    font-family: 'Courier New', Courier, monospace !important;
+  color: rgba(255, 0, 0, 0.8) !important;
 }
 
 .grid-container {
-    margin-top: 0.01vh !important;
+  margin-top: 0.01vh !important;
 }
 
 .card-card {
-    margin: 2% 2% !important;
+  margin: 2% 2% !important;
 }
 
 .card-content {
-    margin: 1% 1% !important;
+  margin: 1% 1% !important;
 }
 
 .card-infected {
-    background-color: rgba(0, 0, 255, 0.5) !important;
-    color:white !important;    
+  background-color: rgba(0, 0, 255, 0.5) !important;
+  color: white !important;
 }
 
 .card-recovered {
-    background-color: rgba(0, 255, 0, 0.7) !important;
-    color:white !important;
+  background-color: rgba(0, 255, 0, 0.7) !important;
+  color: white !important;
 }
 
 .card-deaths {
-    background-color: rgba(255, 0, 0, 0.5) !important;
-    color:white !important;
+  background-color: rgba(255, 0, 0, 0.5) !important;
+  color: white !important;
 }
 
 @media only screen and (max-width: 770px) {
-    .card-card {
-      margin: 2% 2% !important;
-    }
-    
-    .card-heading {
-        font-size: 3vw !important;
-    }
-    
-    .card-curdata {
-        font-size: 4vw !important;
-    }
+  .card-card {
+    margin: 2% 2% !important;
+  }
 
-    .card-content {
-        padding-bottom: 0px !important;
-        padding: 0px !important;
-        margin: 0% 0% !important;
-    }
+  .card-heading {
+    font-size: 3vw !important;
+  }
 
-    .MuiCardContent-root:last-child {
-        padding-bottom: 0px !important;
-    }
+  .card-data {
+    font-size: 6vw !important;
+  }
 
-    .MuiCardContent-root {
-        padding: 0px !important;
-    }
+  .active {
+    font-size: 3vw !important;
+}
+
+  .card-content {
+    padding-bottom: 0px !important;
+    padding: 0px !important;
+    margin: 0% 0% !important;
+  }
+
+  .MuiCardContent-root:last-child {
+    padding-bottom: 0px !important;
+  }
+
+  .MuiCardContent-root {
+    padding: 0px !important;
+  }
 }

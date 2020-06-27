@@ -62,7 +62,7 @@ const SelectionTabs = () => {
 
     return (
         <div className="tab-container">
-            <Paper square className="tab-style">
+            <Paper square  elevation={0} className="tab-style">
                 <Tabs className="tabs"
                     value={value}
                     indicatorColor="primary"
@@ -70,7 +70,7 @@ const SelectionTabs = () => {
                     onChange={handleChange}
                     centered
                 >
-                    <Tab icon={<Icon.Activity />} label="About" />
+                    <Tab icon={<Icon.Activity />} label="News" />
                     <Tab icon={<Icon.Home />} label="Home" />
                     <Tab icon={<PublicIcon />} label="World" />
                 </Tabs>
@@ -83,8 +83,7 @@ const SelectionTabs = () => {
             <DataTable value={value} index={1} data={data} />
             <Chart value={value} index={1} graphData={graphData} />
             <CountryPicker handleCountryChange={handleCountryChange} value={value} index={2} />
-            <Cards data={data} value={value} index={2} />
-      
+            <Cards data={data} value={value} index={2} />     
             <Chart value={value} index={2} graphData={graphData} country={country} />
           
         </div>

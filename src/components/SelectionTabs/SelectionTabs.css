@@ -8,7 +8,10 @@
 
 .tab-style {
     width: 50%;
-    background-color:rgb(244, 246, 248);  
+    background-color:transparent !important;  
+    border: none !important;
+    margin: none !important;
+    padding: none !important;
 }
 
 .tabs {
@@ -21,9 +24,6 @@
     overflow: hidden !important;
 }
 
-.datatable {
-    /* width: 10%; */
-}
 
 @media only screen and (max-width: 770px) {
     .tab-style {
