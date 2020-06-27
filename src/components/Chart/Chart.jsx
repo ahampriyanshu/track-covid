@@ -9,15 +9,6 @@ const Chart = ({ graphData, value, index, country }) => {
 
     let dataset = [], title = '', isGraphDataArr = graphData && Array.isArray(graphData);
 
-    // if(index === 0) {
-    //     dataset = [{
-    //         data: isGraphDataArr ? graphData.map(({ confirmed }) => confirmed) : [],
-    //         label: 'Confirmed',
-    //         borderColor: '#3333ff',
-    //         fill: true
-    //     }];
-    //     title = `Daily Confirmed Cases Timeline`;
-    // } else 
     if ((index === 0 || index === 1) && isGraphDataArr) {
         dataset = [{
             data: isGraphDataArr ? graphData.map(({ confirmed }) => confirmed) : [],

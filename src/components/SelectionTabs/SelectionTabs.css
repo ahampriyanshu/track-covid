@@ -15,15 +15,12 @@
 }
 
 .tabs {
- background-color: rgb(244, 246, 248);
- border: none;
- margin: unset;
+ background-color: transparent;
 }
 
 .react-swipeable-view-container>div {
     overflow: hidden !important;
 }
-
 
 @media only screen and (max-width: 770px) {
     .tab-style {

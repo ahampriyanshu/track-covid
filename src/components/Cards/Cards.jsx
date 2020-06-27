@@ -19,7 +19,7 @@ const Cards = ({ data, value, index }) => {
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
 
-const stillActive = confirmed ? (<Typography className='active' variant="h5" display="block" align='center'>
+const stillActive = confirmed ? (<Typography className='active' variant="h6" display="block" align='center'>
 Active cases : { (confirmed.value - ( recovered.value + deaths.value )).toLocaleString() } 
 </Typography>) : null;
 
@@ -76,7 +76,7 @@ const pieChart = (
                 </Grid>
             </Grid>
             <Grid container  justify="center" >
-            <Grid item  xs={12} md={6} >
+            <Grid item  xs={12} md={4} >
                 <br />
             { pieChart }
             </Grid>

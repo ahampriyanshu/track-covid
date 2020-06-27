@@ -1,12 +1,12 @@
 import React from 'react';
-
+import { Typography } from '@material-ui/core';
 import './Header.css';
 
 const Header = () => {
     return (
        
         <div className="headerCont">
-          {/*  <img src={headerImg} className="image" alt="COVID-19 Tracker"/> */}
+          <Typography className="header" variant="h3">TRACK COVID</Typography>
         </div>
      
     );
