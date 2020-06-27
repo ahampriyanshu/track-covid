@@ -7,6 +7,10 @@
     margin-bottom: 2%;
 }
 
+.state-name{
+    font-weight: bold !important;
+}
+
 .counterConfirmed{
     color: rgba(0, 0, 255, 0.8);
 }
@@ -22,7 +26,6 @@
 
 .paper {
     width: 60%;
-    /* margin-left: 1%; */
 }
 
 .t-head {
@@ -37,8 +40,8 @@
         width: 100%;
     }
     .table-cell {
-        padding-left: 0.05vw !important;
-        padding-right: 0.05vw !important;
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
         font-size: 2.5vw !important;
     }
     .t-head {

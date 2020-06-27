@@ -23,7 +23,7 @@ const DataTable = ({ data, value, index }) => {
     const classes = useStyles();
     const [orderBy, setOrderBy] = useState('confirmed');
     const [order, setOrder] = useState('desc');
-    // const [lastUpdate, setLastUpdate] = useState('');
+
     let firstLabel = ' ', lastUpdate ='';
 
     if (value !== index) return null;
@@ -56,7 +56,7 @@ const DataTable = ({ data, value, index }) => {
                 if (!lastUpdate) lastUpdate = lastUpdated;
                 return (
                     <TableRow key={stateName} hover>
-                        <TableCell component="th" scope="row" className="table-cell">
+                        <TableCell component="th" scope="row" className="table-cell state-name">
                             {stateName}
                         </TableCell>
                         <TableCell align="right" className="table-cell">
@@ -87,7 +87,7 @@ const DataTable = ({ data, value, index }) => {
 
     return (
         <div className="datatable-container">
-            <Paper className="paper" elevation={3}>
+            <Paper  className="paper" elevation={6}>
                 <TableContainer>
                 <br />
                     {lastUpdated}
