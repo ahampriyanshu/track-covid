@@ -24,8 +24,8 @@ const CountryPicker = ({ handleCountryChange, value, index }) => {
 
     return (
         <FormControl variant="outlined" align="center" className="cntry-container">
-            <Select displayEmpty defaultValue="" onChange={e => handleCountryChange(e.target.value)}>
-                <MenuItem value="" key="global"><em>Global</em></MenuItem>
+            <Select align="center" displayEmpty defaultValue="" onChange={e => handleCountryChange(e.target.value)}>
+                <MenuItem align="center" value="" key="global"><em>Global</em></MenuItem>
                 {cntryLst}
             </Select>
         </FormControl>

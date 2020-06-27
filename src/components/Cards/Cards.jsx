@@ -77,11 +77,9 @@ const pieChart = (
             </Grid>
             <Grid container  justify="center" >
             <Grid item  xs={12} md={4} >
-                <br />
             { pieChart }
             </Grid>
             </Grid>
-            <br />
             {stillActive}
             {lastUpdated}
         </div>
