@@ -14,17 +14,17 @@ const Chart = ({ graphData, value, index, country }) => {
             data: isGraphDataArr ? graphData.map(({ confirmed }) => confirmed) : [],
             label: 'Confirmed',
             borderColor: 'rgba(0, 0, 255, 0.5)',
-            fill: true
+            fill: false
         }, {
             data: isGraphDataArr ? graphData.map(({ recovered }) => recovered) : [],
             label: 'Recovered',
             borderColor: 'rgba(0, 255, 0, 0.5)',
-            fill: true
+            fill: false
         }, {
             data: isGraphDataArr ? graphData.map(({ deaths }) => deaths) : [],
             label: 'Deceased',
             borderColor: 'rgba(255, 0, 0, 0.5)',
-            fill: true
+            fill: false
         }];
         title = `Daily Cases Timeline`;
     } else if (index === 2 && isGraphDataArr) {
@@ -57,7 +57,6 @@ const Chart = ({ graphData, value, index, country }) => {
             <Line data={{
                 labels: graphData.map(({ date }) => date),
                 datasets: dataset,
-                fill:false,
             }} 
             options={{
                 title: { display: true, text: title },

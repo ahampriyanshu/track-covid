@@ -26,7 +26,7 @@ export const fetchIndiaData = async () => {
             });
         const totData = statewise.filter((a, b) => a.state==='Total')
             .map(({  confirmed, recovered,
-                deaths, deltaconfirmed, deltadeaths, deltarecovered}) => {
+                deaths, deltaconfirmed, deltadeaths, deltarecovered,lastupdatedtime,statenotes}) => {
                     return {
                         confirmed: {value: parseInt(confirmed)},
                         recovered: {value: parseInt(recovered)},
@@ -34,6 +34,8 @@ export const fetchIndiaData = async () => {
                         deltaconfirmed: parseInt(deltaconfirmed),
                         deltarecovered: parseInt(deltarecovered),
                         deltadeaths: parseInt(deltadeaths),
+                        lastUpdatetot: lastupdatedtime,
+                        news:statenotes
                     }
                 });
         return { stateData, totData };
@@ -47,9 +49,8 @@ export const fetchIndiaGraphData = async () => {
         const {data : {cases_time_series}}  = await axios.get(`${apiUrl}/data.json`);
         // const stateData = data.filter((state) => state.state === "Tamil Nadu")
         const graphData = cases_time_series
-            .map(({ dailyconfirmed, dailydeceased, dailyrecovered, date}) => {
+            .map(({ dailyconfirmed, dailydeceased, dailyrecovered}) => {
                 return {
-                    date,
                     confirmed: parseInt(dailyconfirmed),
                     recovered: parseInt(dailyrecovered),
                     deaths: parseInt(dailydeceased),

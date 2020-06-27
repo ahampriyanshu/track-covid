@@ -8,7 +8,7 @@ import { Pie } from 'react-chartjs-2';
 const Cards = ({ data, value, index }) => {
     if (value !== index) return null;
 
-    const { confirmed, recovered, deaths, lastUpdate, deltaconfirmed, deltadeaths, deltarecovered } 
+    const { confirmed, recovered, deaths, lastUpdate, lastUpdatetot,deltaconfirmed, deltadeaths, deltarecovered, news} 
             = (data && index === 1 && data.totData) ? data.totData[0] : data;
 
     if (!confirmed) {
@@ -18,6 +18,12 @@ const Cards = ({ data, value, index }) => {
     const lastUpdated = lastUpdate ? (<Typography  variant="caption" display="block" align='center'>
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
+
+const lastUpdatedTime = lastUpdatetot ? (<Typography  className="random date" variant="h6" display="block" align='center'>
+Last Updated at {lastUpdatetot} IST
+</Typography>) : null; 
+
+console.log(news);
 
 const stillActive = confirmed ? (<Typography className='active' variant="h6" display="block" align='center'>
 Active Cases left { (confirmed.value - ( recovered.value + deaths.value )).toLocaleString() } 
@@ -83,6 +89,7 @@ const pieChart = (
             <br />
             {stillActive}
             {lastUpdated}
+            {lastUpdatedTime}
         </div>
     );
 }
