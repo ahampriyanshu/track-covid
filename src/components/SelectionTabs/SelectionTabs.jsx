@@ -70,7 +70,7 @@ const SelectionTabs = () => {
                     onChange={handleChange}
                     centered
                 >
-                    <Tab icon={<Icon.GitHub />} label="About" />
+                    <Tab icon={<Icon.Users />} label="About" />
                     <Tab icon={<Icon.Home />} label="Home" />
                     <Tab icon={<PublicIcon />} label="World" />
                 </Tabs>

@@ -1,0 +1,15 @@
+.header{
+    font-family: 'Courier New', Courier, monospace !important;
+    color: blue !important;
+}
+
+.headerCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(250, 250, 250, 0.5) !important;
+}
+
+
+@media only screen and (max-width: 770px) {
+}
