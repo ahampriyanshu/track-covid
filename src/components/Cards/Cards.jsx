@@ -16,11 +16,11 @@ const Cards = ({ data, value, index }) => {
     }
 
     const lastUpdated = lastUpdate ? (<Typography  variant="h6" className="random" display="block" align='center'>
-            Last Updated at {new Date(lastUpdate).toLocaleString()} IST
+            {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
 
 const lastUpdatedTime = lastUpdatetot ? (<Typography  className="random" variant="h6" display="block" align='center'>
-Last Updated at {lastUpdatetot} IST
+{lastUpdatetot} IST
 </Typography>) : null; 
 
 const stillActive = confirmed ? (<Typography className='active' variant="h6" display="block" align='center'>

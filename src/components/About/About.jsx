@@ -41,11 +41,11 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHeader: {
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[700],
+      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[700],
   },
   CardContent:{
     backgroundColor:
-    theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[700],
+    theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[700],
   },
 }));
 
@@ -87,9 +87,6 @@ function Main() {
   return (
     <React.Fragment className="about-main" >
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
-        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-           CRA - PWA
-        </Typography>
         <Typography variant="h5" align="center" color="textSecondary" component="p">
        A react app to track covid 19
         </Typography>

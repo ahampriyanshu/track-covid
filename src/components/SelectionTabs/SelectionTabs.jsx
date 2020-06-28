@@ -62,6 +62,7 @@ const SelectionTabs = () => {
 
     return (
         <div className="tab-container">
+
             <Paper square  elevation={0} className="tab-style">
                 <Tabs className="tabs"
                     value={value}

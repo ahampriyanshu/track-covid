@@ -1,31 +1,52 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import './App.css';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider, Paper } from '@material-ui/core';
-import './App.css';
-import { SelectionTabs, Header, Footer } from './components';
+import { SelectionTabs, Footer } from './components';
+import IconButton from '@material-ui/core/IconButton';
+import * as Icon from 'react-feather';
+import { zoomIn } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
 
-const theme = createMuiTheme({
+function App(){
+  const styles = {
+    zoomIn: {
+      animation: 'x 3s',
+      animationName: Radium.keyframes(zoomIn, 'zoomIn')
+    }
+  }
+
+  const [ darkMode, setDarkMode ] = useState(false);
+
+  const icon = darkMode ? <Icon.Moon /> : <Icon.Sun />;
+
+const darkTheme = createMuiTheme({
   palette: {
-    type: 'light',
+    type:"dark",
   },
 });
 
+const lightTheme = createMuiTheme({});
 
-class App extends Component {
 
-  render() {
     return (
-      <div className="container">
-      <ThemeProvider theme={theme}>
+      <React.Fragment> 
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Paper elevation={0} >
-      <Header />
+      <StyleRoot>
+          <div style={styles.zoomIn} className="headerCont" >
+          <span className="header track" > TRACK </span> <span className="header covid" >&nbsp;COVID </span>
+          <IconButton aria-label="delete" onClick={() => setDarkMode(!darkMode)} >
+      {icon}
+      </IconButton>
+        </div>
+        </StyleRoot>
       <SelectionTabs />
       <Footer />
       </Paper>
       </ThemeProvider>
-      </div>
+      </React.Fragment>
     );
   }
-}
 
 export default App;

@@ -1,5 +1,5 @@
 {
-  "short_name": "track-covid",
+  "short_name": "Not Made In hina",
   "name": "track-covid",
   "description": "A React app to track covid19 data ",
   "icons": [
@@ -22,6 +22,6 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
+  "background_color": "#f3f7f7",
   "orientation": "portrait"
 }
