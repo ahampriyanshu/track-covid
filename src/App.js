@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="container">
       <ThemeProvider theme={theme}>
-      <Paper>
+      <Paper elevation={0} >
       <Header />
       <SelectionTabs />
       <Footer />

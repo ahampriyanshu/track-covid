@@ -7,6 +7,7 @@ const Footer = () => {
 
     return (
 <footer className="footer-container">
+    <br />
 <Link href="https://github.com/PriyanshuMay " > <Icon.GitHub /> </Link>
 <Link href="https://github.com/PriyanshuMay " > <Icon.Mail /> </Link>
 <Link href="https://github.com/PriyanshuMay " > <Icon.Linkedin /> </Link>
