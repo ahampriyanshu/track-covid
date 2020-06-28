@@ -7,7 +7,7 @@ const cntryApiUrl = 'https://covid19.mathdro.id/api';
 export const fetchIndiaData = async () => {
     try {
         const {data : {statewise}}  = await axios.get(`${apiUrl}/data.json`);
-        // const stateData = data.filter((state) => state.state === "Tamil Nadu")
+        
         const stateData = statewise.filter((a, b) => a.state!=='Total')
             .sort((a, b) => parseInt(b.confirmed) - parseInt(a.confirmed))
             .map(({ state, confirmed, active, recovered,
@@ -93,4 +93,4 @@ export const fetchCountries = async () => {
     } catch (error) {
         console.log("fetchCountries -> error", error)
     }
-}
+}   

@@ -15,11 +15,11 @@ const Cards = ({ data, value, index }) => {
         return (<Rotating />);
     }
 
-    const lastUpdated = lastUpdate ? (<Typography  variant="h6" className="random date" display="block" align='center'>
+    const lastUpdated = lastUpdate ? (<Typography  variant="h6" className="random" display="block" align='center'>
             Last Updated at {new Date(lastUpdate).toLocaleString()} IST
         </Typography>) : null;
 
-const lastUpdatedTime = lastUpdatetot ? (<Typography  className="random date" variant="h6" display="block" align='center'>
+const lastUpdatedTime = lastUpdatetot ? (<Typography  className="random" variant="h6" display="block" align='center'>
 Last Updated at {lastUpdatetot} IST
 </Typography>) : null; 
 

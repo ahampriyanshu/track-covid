@@ -3,7 +3,7 @@ import { Paper, Tabs, Tab} from '@material-ui/core';
 import * as Icon from 'react-feather';
 import PublicIcon from '@material-ui/icons/Public';
 import './SelectionTabs.css';
-import News from '../News/News';
+import About from '../About/About.jsx';
 import DataTable from '../DataTable/DataTable.jsx';
 import Chart from '../Chart/Chart.jsx';
 import CountryPicker from '../CountryPicker/CountryPicker.jsx';
@@ -70,14 +70,14 @@ const SelectionTabs = () => {
                     onChange={handleChange}
                     centered
                 >
-                    <Tab icon={<Icon.Activity />} label="News" />
+                    <Tab icon={<Icon.GitHub />} label="About" />
                     <Tab icon={<Icon.Home />} label="Home" />
                     <Tab icon={<PublicIcon />} label="World" />
                 </Tabs>
             </Paper>
   
         
-            <News data={data} value={value} index={0} />
+            <About value={value} index={0} />
             <Cards data={data} value={value} index={1} />
             <Chart value={value} index={1} graphData={graphData} />
             <DataTable value={value} index={1} data={data} />

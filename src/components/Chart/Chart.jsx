@@ -62,6 +62,8 @@ const Chart = ({ graphData, value, index, country }) => {
             }} 
             options={{
                 title: { display: true, text: title },
+                responsive: true,
+                maintainAspectRatio: true,
                 scales: {
                     xAxes: [{
                         gridLines: {

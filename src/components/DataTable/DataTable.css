@@ -51,10 +51,6 @@ border: none !important;
 
 @media only screen and (max-width: 770px) {
 
-    .date {
-        font-size: 3vw !important;
-    }
-
     .datatable-container{
         font-size: 40px !important;
     }
