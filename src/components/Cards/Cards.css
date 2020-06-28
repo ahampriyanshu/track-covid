@@ -52,8 +52,11 @@
   }
 
   .card-data {
-    font-size: 6vw !important;
+    font-size: 4vw !important;
   }
+.card-delta{
+  font-size: 3vw !important;
+}
 
   .active {
     font-size: 3vw !important;
