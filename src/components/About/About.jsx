@@ -12,6 +12,7 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   '@global': {
     ul: {
+      fontFamily:'Courier New',
       margin: 0,
       padding: 0,
       listStyle: 'none',
@@ -36,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[700],
   },
+  CardContent:{
+    backgroundColor:
+    theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[700],
+  },
   cardPricing: {
     display: 'flex',
     justifyContent: 'center',
@@ -56,29 +61,29 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: <Icon.GitHub/>,
+    title: <Link color="inherit" underline="none" href="https://github.com/PriyanshuMay " ><Icon.Meh/></Link>,
     subheader: 'About Me',
-    description: ['Priyanshumay', 'Priyanshu Tiwari', 'Some Projects', 'Gmail'],
+    description: [<Link color="inherit" underline="none" href=" " ><Icon.GitHub />  Priyanshumay</Link>, <Link color="inherit" underline="none" href=" " ><Icon.Linkedin />  Priyanshu Tiwari</Link>,<Link color="inherit" underline="none" href=" " ><Icon.Activity /> Some Projects</Link>, <Link color="inherit" underline="none" href=" " ><Icon.AtSign/> Gmail </Link>],
   },
   {
-    title: <Icon.GitHub />,
+    title: <Link color="inherit" underline="none" href="https://github.com/PriyanshuMay " ><Icon.GitHub /></Link>,
     subheader: 'About The Project',
     description: [
-      'React',
-      'Material Ui',
-      'Axios',
-      'Chart-js-2',
-      'Feather Icons'
+      <Link  color="inherit" underline="none" href=" " >React</Link>,
+      <Link color="inherit" underline="none" href=" " >Material Ui</Link>,
+      <Link color="inherit" underline="none" href=" " >Axios</Link>,
+      <Link color="inherit" underline="none" href=" " >Chart-js-2</Link>,
+      <Link color="inherit" underline="none" href=" " >Feather Icons</Link>
     ],
   },
   {
-    title: <Icon.Database />,
+    title:<Link color="inherit" underline="none" href=" " > <Icon.Database /></Link>,
     subheader: 'Database',
     description: [
-      'Download Source Code',
-      'Source for Indian data',
-      'Source for global data',
-      'Download data as json',
+      <Link color="inherit" underline="none" href=" " >Download Source Code</Link>,
+      <Link color="inherit" underline="none" href=" " >Source for Indian data</Link>,
+      <Link color="inherit" underline="none" href=" " >Source for global data</Link>,
+      <Link color="inherit" underline="none" href=" " >Download data as json</Link>,
     ],
   },
 ];
@@ -89,7 +94,6 @@ function Main() {
 
   return (
     <React.Fragment>
- 
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
            CRA - PWA
@@ -111,7 +115,9 @@ function Main() {
                   subheaderTypographyProps={{ align: 'center' }}
                   className={classes.cardHeader}
                 />
-                <CardContent>
+                <CardContent
+                className={classes.CardContent}
+                >
                   <ul>
                     {tier.description.map((line) => (
                       <Typography component="li" variant="subtitle1" align="center" key={line}>
@@ -134,6 +140,7 @@ const About = ({ value, index }) => {
 
   return (
 Main()
+
   );
 }
 
