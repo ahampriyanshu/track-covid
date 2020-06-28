@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 import './Header.css';
 import { zoomIn } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
@@ -16,7 +15,7 @@ const Header = () => {
     return (
       <StyleRoot>
           <div style={styles.zoomIn} className="headerCont" >
-          <Typography  className="header" variant="h3">TRACK COVID</Typography>
+          <span className="header track" > TRACK </span> <span className="header covid" >&nbsp;COVID </span>
         </div>
         </StyleRoot>
     );

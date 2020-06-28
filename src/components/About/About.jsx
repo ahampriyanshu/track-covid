@@ -10,9 +10,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
+  typography: {
+    fontFamily: [
+      '"Courier"',
+
+    ].join(','),
+  },
   '@global': {
+    fontFamily: `"Courier"`,
     ul: {
-      fontFamily:'Courier New',
       margin: 0,
       padding: 0,
       listStyle: 'none',
@@ -41,22 +47,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:
     theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[700],
   },
-  cardPricing: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'baseline',
-    marginBottom: theme.spacing(2),
-  },
-  footer: {
-    borderTop: `1px solid ${theme.palette.divider}`,
-    marginTop: theme.spacing(8),
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
-    [theme.breakpoints.up('sm')]: {
-      paddingTop: theme.spacing(6),
-      paddingBottom: theme.spacing(6),
-    },
-  },
 }));
 
 const tiers = [
@@ -79,7 +69,7 @@ const tiers = [
   },
   {
     title:<Link color="inherit" underline="none" href=" " >  <Icon.Database /></Link>,
-    subheader: 'Database',
+    subheader: 'Datasource',
     description: [
       <Link color="inherit" underline="none" href="git@github.com:PriyanshuMay/track-covid.git" >Download Source Code</Link>,
       <Link color="inherit" underline="none" href="https://api.covid19india.org/" >Source for Indian data</Link>,
@@ -95,7 +85,7 @@ function Main() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <React.Fragment className="about-main" >
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
            CRA - PWA
