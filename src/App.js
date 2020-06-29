@@ -24,6 +24,10 @@ function App(){
 const darkTheme = createMuiTheme({
   palette: {
     type:"dark",
+    background: {
+      paper: "#222831"
+    },
+    color: 'red'
   },
 });
 
