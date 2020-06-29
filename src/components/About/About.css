@@ -2,6 +2,17 @@
     font-family: 'Courier New', Courier, monospace !important;
 }
 
+.card-span{
+  font-family: 'Courier New', Courier, monospace !important;
+  color:#29c7ac;
+}
+
+.subheader{
+  font-family: 'Courier New', Courier, monospace !important;
+  color:#f2a365;
+  font-size:1.5em !important;
+}
+
 .react-logo {
   height: 128px;
   width: 170px;

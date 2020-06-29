@@ -76,8 +76,7 @@ const SelectionTabs = () => {
                     <Tab icon={<PublicIcon />} label="World" />
                 </Tabs>
             </Paper>
-  
-        
+            
             <About value={value} index={0} />
             <Cards data={data} value={value} index={1} />
             <Chart value={value} index={1} graphData={graphData} />
