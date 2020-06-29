@@ -10,6 +10,7 @@ import Radium, {StyleRoot} from 'radium';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App(){
+
   const styles = {
     zoomIn: {
       animation: 'x 3s',
@@ -24,16 +25,17 @@ function App(){
 const darkTheme = createMuiTheme({
   palette: {
     type:"dark",
+    primary: { main: "#f2a365", contrastText: "#fff" },
     background: {
       paper: "#222831"
-    },
-    color: 'red'
-  },
+    }
+  }
 });
 
 const lightTheme = createMuiTheme({
   palette: {
     type: "light",
+    primary: { main: "#e91e63", contrastText: "#fff" },
     background: {
       paper: "white"
     }
@@ -46,9 +48,8 @@ const lightTheme = createMuiTheme({
       <CssBaseline />
       <Paper elevation={0} >
       <StyleRoot>
-          <div style={styles.zoomIn} className="headerCont" >
-          <span className="header track" > TRACK </span> <span className="header covid" >&nbsp;COVID </span>
-          <IconButton  aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
+          <div  className="headerCont" >
+          <span style={styles.zoomIn} className="header track" > TRACK </span> <span style={styles.zoomIn} className="header covid" >&nbsp;COVID </span>        <IconButton  aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
       {icon}
       </IconButton>
         </div>

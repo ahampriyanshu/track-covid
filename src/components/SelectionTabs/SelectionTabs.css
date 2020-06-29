@@ -12,9 +12,6 @@
     padding: none !important;
 }
 
-.tabs {
-}
-
 @media only screen and (max-width: 770px) {
     .tab-style {
       width: 100%;

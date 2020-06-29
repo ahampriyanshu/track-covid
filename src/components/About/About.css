@@ -1,7 +1,3 @@
-.about-main{
-    font-family: 'Courier New', Courier, monospace !important;
-}
-
 .card-span{
   font-family: 'Courier New', Courier, monospace !important;
   color:#29c7ac;
@@ -27,18 +23,19 @@
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 30px;
     font-family: bold;
+    letter-spacing: 1px !important;
 }
 
 .react-span{
-    color: rgba(0, 0, 255, 0.5);
+    color: #61dbfb;
 }
 
 .mui-span{
-  color: rgba(0, 255, 0, 0.5);
+  color: #00b0ff;
 }
 
 .net-span{
-  color: rgba(255, 0, 0, 0.5);
+  color:#25c7b7;
 }
   
   @media only screen and (max-width: 770px) {

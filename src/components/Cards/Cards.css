@@ -9,11 +9,14 @@
 
 .active {
     font-family: 'Courier New', Courier, monospace !important;
-    color: rgba(0, 0,255,0.8) !important;
+    color:#29c7ac !important;
+    font-weight: bolder !important;
 }
 .random {
   font-family: 'Courier New', Courier, monospace !important;
-  font-weight: bold;
+  font-weight: bolder !important;
+  color:#f2a365 !important;
+  letter-spacing: 1px !important;
 }
 .grid-container {
   margin-top: 0.01vh !important;
@@ -59,10 +62,10 @@
 }
 
   .active {
-    font-size: 3vw !important;
+    font-size: 4vw !important;
 }
 .random {
-  font-size: 3vw !important;
+  font-size: 4vw !important;
 }
 
   .card-contentrandom {

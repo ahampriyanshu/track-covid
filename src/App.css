@@ -1,20 +1,22 @@
 .header{
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 50px;
+    font-weight: bolder !important;
 }
 
 .track{
-    color: rgba(0, 0, 255, 0.5);
+    color: #f2a365;
 }
 
 .covid{
-    color: rgba(0, 255, 0, 0.5);
+    color:#29c7ac;
 }
 
 .headerCont {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
+    direction: ltr;
     align-items: center;
     justify-content: center;
     background-color: transparent !important;
