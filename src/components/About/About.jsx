@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import virus from "../../images/rotating.png";
+import './About.css';
 
 const useStyles = makeStyles((theme) => ({
   typography: {
@@ -51,12 +53,12 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: <Link color="inherit" underline="none" href="https://github.com/PriyanshuMay " ><Icon.Meh/></Link>,
+    title: <Link color="inherit" underline="none" href="https://github.com/PriyanshuMay " ><Icon.Coffee/></Link>,
     subheader: 'About Me',
     description: [<Link color="inherit" underline="none" href=" " > <Icon.GitHub />  Priyanshumay</Link>, <Link color="inherit" underline="none" href=" " > <Icon.Linkedin />  Priyanshu Tiwari</Link>,<Link color="inherit" underline="none" href=" " > <Icon.Activity /> Some Projects</Link>, <Link color="inherit" underline="none" href=" " > <Icon.AtSign/> tiwarimay2002@gmail.com </Link>],
   },
   {
-    title: <Link color="inherit" underline="none" href="https://github.com/PriyanshuMay " ><Icon.GitHub /></Link>,
+    title: <Link color="inherit" underline="none" href="https://github.com/PriyanshuMay " > <img src={virus} alt="logo" className="project-logo"/></Link>,
     subheader: 'About The Project',
     description: [
       <Link  color="inherit" underline="none" href=" " > React</Link>,

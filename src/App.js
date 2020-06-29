@@ -26,7 +26,14 @@ const darkTheme = createMuiTheme({
   },
 });
 
-const lightTheme = createMuiTheme({});
+const lightTheme = createMuiTheme({
+  palette: {
+    type: "light",
+    background: {
+      paper: "white"
+    }
+  }
+});
 
 
     return (
@@ -36,7 +43,7 @@ const lightTheme = createMuiTheme({});
       <StyleRoot>
           <div style={styles.zoomIn} className="headerCont" >
           <span className="header track" > TRACK </span> <span className="header covid" >&nbsp;COVID </span>
-          <IconButton aria-label="delete" onClick={() => setDarkMode(!darkMode)} >
+          <IconButton aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
       {icon}
       </IconButton>
         </div>
