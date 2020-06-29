@@ -1,13 +1,8 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import * as Icon from 'react-feather';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import { CardContent, Paper, CardHeader,Grid, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import virus from "../../images/rotating.png";
 import react from '../../images/react.png';
 import mui from '../../images/mui.png';
@@ -15,12 +10,6 @@ import net from '../../images/netlify.png'
 import './About.css';
 
 const useStyles = makeStyles((theme) => ({
-  typography: {
-    fontFamily: [
-      '"Courier"',
-
-    ].join(','),
-  },
   '@global': {
     fontFamily: `"Courier"`,
     ul: {
@@ -36,10 +25,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor:'rgba(0, 0, 250, 0.4)',
+    backgroundColor:'none',
   },
   CardContent:{
-    backgroundColor: 'rgba(0, 250, 0, 0.4)' ,
+    backgroundColor: 'none' ,
   },
 }));
 
@@ -65,11 +54,11 @@ const tiers = [
     title:<Link color="inherit" underline="none" href=" " >  <Icon.Database /></Link>,
     subheader: 'Datasource',
     description: [
-      <Link color="inherit" underline="none" href="git@github.com:PriyanshuMay/track-covid.git" >Download Source Code</Link>,
-      <Link color="inherit" underline="none" href="https://api.covid19india.org/" >Source for Indian data</Link>,
-      <Link color="inherit" underline="none" href="https://covid19.mathdro.id/api" >Source for global data</Link>,
-      <Link color="inherit" underline="none" href="https://raw.githubusercontent.com/covid19india/api/gh-pages/raw_data.json" >Download data as JSON</Link>,
-      <Link color="inherit" underline="none" href="https://raw.githubusercontent.com/covid19india/api/gh-pages/csv/latest/raw_data.csv" >Download data as CSV</Link>,
+      <Link color="inherit" underline="none" href="git@github.com:PriyanshuMay/track-covid.git" ><Icon.Download /> Download Source Code</Link>,
+      <Link color="inherit" underline="none" href="https://api.covid19india.org/" ><Icon.Link2 /> Source for Indian data</Link>,
+      <Link color="inherit" underline="none" href="https://covid19.mathdro.id/api" ><Icon.Link2 /> Source for global data</Link>,
+      <Link color="inherit" underline="none" href="https://raw.githubusercontent.com/covid19india/api/gh-pages/raw_data.json" ><Icon.Download /> Download data as JSON</Link>,
+      <Link color="inherit" underline="none" href="https://raw.githubusercontent.com/covid19india/api/gh-pages/csv/latest/raw_data.csv" ><Icon.Download /> Download data as CSV</Link>,
     ],
   },
 ];
@@ -80,14 +69,26 @@ function Main() {
 
   return (
     <React.Fragment className="about-main" >
-      <Container alignItems='center' maxWidth="sm" component="main" className={classes.heroContent}>
-  <span className='hero-span react-span' ><img src={react} alt="logo" className="project-logo"/>Created in React</span>
-  <span className='hero-span mui-span' ><img src={mui} alt="logo" className="project-logo"/>Powered by MUI</span>
-  <span className='hero-span net-span' ><img src={net} alt="logo" className="project-logo"/>Hosted On Netlify</span>
-  
-      </Container>
-      {/* End hero unit */}
-      <Container maxWidth="md" component="main">
+
+<br />
+
+<Grid justifyContent="center" align="center" container spacing={12}>
+  <Grid item md={2}>
+  <span className='hero-span react-span' ><img src={react} alt="logo" className="project-logo"/><br />Created in React</span>
+  </Grid>
+  <Grid item md={2}>
+  <span className='hero-span mui-span' ><img src={mui} alt="logo" className="project-logo"/><br />Styled in MUI</span>
+  </Grid>
+  <Grid item md={2}>
+  <span className='hero-span net-span' ><img src={net} alt="logo" className="project-logo"/><br />Hosted On Netlify</span>
+  </Grid>
+</Grid>
+
+ 
+ 
+
+
+      <Paper maxWidth="md" elevation={0}  component="main">
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map((tier) => (
             <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
@@ -114,7 +115,7 @@ function Main() {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Paper>
     </React.Fragment>
   );
 }

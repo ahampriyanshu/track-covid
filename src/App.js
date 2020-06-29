@@ -36,22 +36,6 @@ const lightTheme = createMuiTheme({
   }
 });
 
-const style = {
-  margin: 0,
-  top: 22,
-  right: 25,
-  bottom: 'auto',
-  left: 'auto',
-  position: 'fixed',
-  '@media(maxWidth: 770px)' : {
-    margin: 0,
-    top: 'auto',
-    right: 200,
-    bottom: 20,
-    left: 'auto',
-  }
-};
-
     return (
       <React.Fragment> 
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
@@ -60,7 +44,7 @@ const style = {
       <StyleRoot>
           <div style={styles.zoomIn} className="headerCont" >
           <span className="header track" > TRACK </span> <span className="header covid" >&nbsp;COVID </span>
-          <IconButton  style={style} aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
+          <IconButton  aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
       {icon}
       </IconButton>
         </div>
