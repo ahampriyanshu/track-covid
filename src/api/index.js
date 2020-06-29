@@ -40,7 +40,7 @@ export const fetchIndiaData = async () => {
                 });
         return { stateData, totData };
     } catch (error) {
-        console.log("fetchTNData -> error", error);
+        console.log("fetchIndiaData -> error", error);
     }
 }
 

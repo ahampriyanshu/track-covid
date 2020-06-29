@@ -1,13 +1,21 @@
 .about-main{
     font-family: 'Courier New', Courier, monospace !important;
 }
+
+.react-logo {
+  height: 128px;
+  width: 170px;
+}
+
 .project-logo {
     height: 128px;
     width: 128px;
-  }
-  .hero-span{
+}
+
+  .main-span{
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 30px;
+    font-family: bold;
 }
 
 .react-span{
@@ -29,4 +37,8 @@
         width: 64px;
       }
 
+      .react-logo {
+        height: 64px;
+        width: 88px;
+      }
 }

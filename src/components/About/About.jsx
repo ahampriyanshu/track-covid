@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import * as Icon from 'react-feather';
-import { CardContent, Paper, CardHeader,Grid, Typography, Link } from '@material-ui/core';
+import { CardContent, Container, CardHeader,Grid, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import virus from "../../images/rotating.png";
 import react from '../../images/react.png';
@@ -10,6 +10,10 @@ import net from '../../images/netlify.png'
 import './About.css';
 
 const useStyles = makeStyles((theme) => ({
+  card: {
+    borderRadius: 0,
+    boxShadow: "none"
+   },
   '@global': {
     fontFamily: `"Courier"`,
     ul: {
@@ -72,27 +76,36 @@ function Main() {
 
 <br />
 
-<Grid justifyContent="center" align="center" container spacing={12}>
-  <Grid item md={2}>
-  <span className='hero-span react-span' ><img src={react} alt="logo" className="project-logo"/><br />Created in React</span>
+<Grid container
+  spacing={6}
+  direction="row"
+  alignItems="center"
+  justify="center"
+  align="center"
+  >
+  <Grid item xs={12} spacing={3} md={3} >
+  <span className='main-span react-span' ><img src={react} alt="logo" className="react-logo"/><br />Created in React</span>
   </Grid>
-  <Grid item md={2}>
-  <span className='hero-span mui-span' ><img src={mui} alt="logo" className="project-logo"/><br />Styled in MUI</span>
+  <Grid item xs={12} spacing={3} md={3} >
+  <span className='main-span mui-span' ><img src={mui} alt="logo" className="project-logo"/><br />Styled in MUI</span>
   </Grid>
-  <Grid item md={2}>
-  <span className='hero-span net-span' ><img src={net} alt="logo" className="project-logo"/><br />Hosted On Netlify</span>
+  <Grid item xs={12} spacing={3} md={3} >
+  <span className='main-span net-span' ><img src={net} alt="logo" className="project-logo"/><br />Hosted On Netlify</span>
   </Grid>
 </Grid>
 
- 
- 
-
-
-      <Paper maxWidth="md" elevation={0}  component="main">
-        <Grid container spacing={5} alignItems="flex-end">
+<Grid container
+  spacing={3}
+  direction="row"
+  alignItems="center"
+  justify="center"
+  align="center"
+  >
           {tiers.map((tier) => (
-            <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
-              <Card>
+            <Grid item key={tier.title} xs={12} sm={6} md={2}>
+              <Card
+              classes={{ root: classes.card }}
+              >
                 <CardHeader
                   title={tier.title}
                   subheader={tier.subheader}
@@ -115,7 +128,6 @@ function Main() {
             </Grid>
           ))}
         </Grid>
-      </Paper>
     </React.Fragment>
   );
 }
