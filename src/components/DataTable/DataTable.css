@@ -34,6 +34,7 @@ border: none !important;
 }
 
 .table-cell{
+    background-color: transparent !important;
     border-bottom: none !important; 
 }
 
@@ -45,6 +46,7 @@ border: none !important;
 
 .t-head {
     font-weight: bold;
+    
 }
 
 @media only screen and (max-width: 770px) {

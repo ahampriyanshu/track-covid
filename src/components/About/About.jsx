@@ -9,6 +9,9 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import virus from "../../images/rotating.png";
+import react from '../../images/react.png';
+import mui from '../../images/mui.png';
+import net from '../../images/netlify.png'
 import './About.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,28 +29,17 @@ const useStyles = makeStyles((theme) => ({
       listStyle: 'none',
     },
   },
-  appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  toolbar: {
-    flexWrap: 'wrap',
-  },
-  toolbarTitle: {
-    flexGrow: 1,
-  },
-  link: {
-    margin: theme.spacing(1, 1.5),
-  },
   heroContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[700],
+    backgroundColor:'rgba(0, 0, 250, 0.4)',
   },
   CardContent:{
-    backgroundColor:
-    theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[700],
+    backgroundColor: 'rgba(0, 250, 0, 0.4)' ,
   },
 }));
 
@@ -88,10 +80,11 @@ function Main() {
 
   return (
     <React.Fragment className="about-main" >
-      <Container maxWidth="sm" component="main" className={classes.heroContent}>
-        <Typography variant="h5" align="center" color="textSecondary" component="p">
-       A react app to track covid 19
-        </Typography>
+      <Container alignItems='center' maxWidth="sm" component="main" className={classes.heroContent}>
+  <span className='hero-span react-span' ><img src={react} alt="logo" className="project-logo"/>Created in React</span>
+  <span className='hero-span mui-span' ><img src={mui} alt="logo" className="project-logo"/>Powered by MUI</span>
+  <span className='hero-span net-span' ><img src={net} alt="logo" className="project-logo"/>Hosted On Netlify</span>
+  
       </Container>
       {/* End hero unit */}
       <Container maxWidth="md" component="main">

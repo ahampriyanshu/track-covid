@@ -5,6 +5,22 @@
     height: 128px;
     width: 128px;
   }
+  .hero-span{
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 50px;
+}
+
+.react-span{
+    color: rgba(0, 0, 255, 0.5);
+}
+
+.mui-span{
+  color: rgba(0, 255, 0, 0.5);
+}
+
+.net-span{
+  color: rgba(255, 0, 0, 0.5);
+}
   
   @media only screen and (max-width: 770px) {
 

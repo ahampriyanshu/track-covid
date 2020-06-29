@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import * as Icon from 'react-feather';
 import { zoomIn } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App(){
   const styles = {
@@ -35,15 +36,31 @@ const lightTheme = createMuiTheme({
   }
 });
 
+const style = {
+  margin: 0,
+  top: 22,
+  right: 25,
+  bottom: 'auto',
+  left: 'auto',
+  position: 'fixed',
+  '@media(maxWidth: 770px)' : {
+    margin: 0,
+    top: 'auto',
+    right: 200,
+    bottom: 20,
+    left: 'auto',
+  }
+};
 
     return (
       <React.Fragment> 
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <CssBaseline />
       <Paper elevation={0} >
       <StyleRoot>
           <div style={styles.zoomIn} className="headerCont" >
           <span className="header track" > TRACK </span> <span className="header covid" >&nbsp;COVID </span>
-          <IconButton aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
+          <IconButton  style={style} aria-label="darkMode" onClick={() => setDarkMode(!darkMode)} >
       {icon}
       </IconButton>
         </div>
