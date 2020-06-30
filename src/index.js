@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {Suspense, lazy} from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+const App = lazy(() => import('./App' /* webpackChunkName: "App" */));
 
-  <React.StrictMode>
+ReactDOM.render(
+  <Suspense fallback={<div />}>
     <App />
-  </React.StrictMode>,
+  </Suspense>,
   document.getElementById('root')
 );
 
