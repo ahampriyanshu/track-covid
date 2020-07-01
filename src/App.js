@@ -42,7 +42,7 @@ function App() {
   const lightTheme = createMuiTheme({
     palette: {
       type: 'light',
-      primary: {main: '#e91e63', contrastText: '#fff'},
+      primary: {main: '#29c7ac', contrastText: '#fff'},
       background: {
         paper: 'white',
       },

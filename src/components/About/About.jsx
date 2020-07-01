@@ -23,18 +23,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'none',
   },
   '@global': {
-    fontFamily: `"Courier"`,
     ul: {
       margin: 0,
       padding: 0,
       listStyle: 'none',
     },
-  },
-  heroContent: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
     backgroundColor: 'none',
@@ -228,7 +221,7 @@ function Main() {
           <span className="main-span react-span">
             <img src={react} alt="logo" className="react-logo" />
             <br />
-            Created in React
+            Built in React
           </span>
         </Grid>
         <Grid item xs={12} spacing={3} md={3}>

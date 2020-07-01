@@ -22,8 +22,8 @@
   .main-span{
     font-family: 'Courier New', Courier, monospace !important;
     font-size: 30px;
-    font-family: bold;
-    letter-spacing: 1px !important;
+    font-weight: bolder !important;
+    letter-spacing:none !important;
 }
 
 .react-span{
