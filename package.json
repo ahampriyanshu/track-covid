@@ -25,11 +25,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run compress_maps && cp build/index.html && npm run build-sw",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-sw": "node ./src/sw-build.js",
-    "start-sw": "http-server ./build -c 0"
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "eslintConfig": {
     "extends": "react-app"
