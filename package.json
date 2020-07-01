@@ -29,12 +29,29 @@
     "eject": "react-scripts eject",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix --max-warnings=0",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|md|html)\"",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|css|yaml|md|html)\"",
     "build-sw": "node ./src/sw-build.js",
     "start-sw": "http-server ./build -c 0"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "npm run eslint:fix",
+      "prettier --write \"**/*.+(js|jsx)\""
+    ],
+    "*.+(json|yml|yaml|md)": [
+      "prettier --write \"**/*.+(json|yml|css|yaml|md)\""
+    ]
   },
   "browserslist": {
     "production": [
@@ -53,6 +70,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }
 }
