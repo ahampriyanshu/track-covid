@@ -1,10 +1,15 @@
-/* global workbox */
+if (typeof importScripts === 'function') {
+  importScripts(
+    'https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js'
+  );
+
+  /* global workbox */
   if (workbox) {
     console.log('Workbox is loaded 🚀');
     workbox.core.skipWaiting();
 
     /* injection point for manifest files.  */
-    workbox.precaching.precacheAndRoute([]);
+    workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
     /* custom cache rules */
     workbox.routing.registerRoute(
@@ -42,3 +47,4 @@
   } else {
     console.log('Workbox could not be loaded. Hence, no offline support.');
   }
+}

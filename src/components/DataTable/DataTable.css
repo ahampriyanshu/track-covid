@@ -21,9 +21,6 @@ border: none !important;
     font-weight: bold !important;
 }
 
-.counterConfirmed{
-    color: rgba(0, 0, 255, 0.8);
-}
 
 .counterRecovered{
     color: rgba(0, 255, 0, 0.8);
