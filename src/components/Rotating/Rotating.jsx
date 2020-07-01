@@ -8,4 +8,4 @@ const Rotating = () => {
   )
 }
 
-export default Rotating;
+export default React.memo(Rotating);

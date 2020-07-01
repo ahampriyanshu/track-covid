@@ -123,4 +123,4 @@ const DataTable = ({ data, value, index }) => {
     );
 }
 
-export default DataTable;
+export default React.memo(DataTable);

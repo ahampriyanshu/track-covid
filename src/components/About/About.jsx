@@ -293,4 +293,4 @@ const About = ({ value, index }) => {
   return Main();
 };
 
-export default About;
+export default React.memo(About);

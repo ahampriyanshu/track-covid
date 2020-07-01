@@ -94,4 +94,4 @@ const pieChart = (
     );
 }
 
-export default Cards;
+export default React.memo(Cards);

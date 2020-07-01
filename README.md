@@ -11,12 +11,13 @@
 ## Setup
 
 ```bash
-<p align="center">
+
 git clone https://github.com/PriyanshuMay/track-covid.git && cd track-covid
 npm i && npm start
-</p>
+
 ```
 ## Hosted on Netlify
 
 ## Help to make this CRA-PWA better
-
+ 
+* [Contributing Guide](CONTRIBUTING.md)

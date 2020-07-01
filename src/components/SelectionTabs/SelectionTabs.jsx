@@ -108,4 +108,4 @@ const SelectionTabs = () => {
     );
 }
 
-export default SelectionTabs;
+export default React.memo(SelectionTabs);

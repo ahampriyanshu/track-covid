@@ -3,7 +3,7 @@ import { ThemeProvider, Paper } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import * as Icon from "react-feather";
-import { zoomIn } from "react-animations";
+import { zoomIn } from "react-animations/";
 import Radium, { StyleRoot } from "radium";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import "./App.css";
@@ -59,12 +59,14 @@ function App() {
                 <span style={styles.zoomIn} className="header covid">
                   &nbsp;COVID{" "}
                 </span>{" "}
+                <span style={styles.zoomIn} className="toggle-button">
                 <IconButton
                   aria-label="darkMode"
                   onClick={() => setDarkMode(!darkMode)}
                 >
                   {icon}
                 </IconButton>
+                </span>
               </div>
             </StyleRoot>
           </Suspense>
@@ -82,4 +84,4 @@ function App() {
   );
 }
 
-export default App;
+export default React.memo(App);

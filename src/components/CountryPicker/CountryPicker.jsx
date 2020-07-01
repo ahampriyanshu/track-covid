@@ -32,4 +32,4 @@ const CountryPicker = ({ handleCountryChange, value, index }) => {
     );
 }
 
-export default CountryPicker;
+export default React.memo(CountryPicker);

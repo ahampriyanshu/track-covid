@@ -132,4 +132,4 @@ const Chart = ({ graphData, value, index, country }) => {
     );
 }
 
-export default Chart;
+export default React.memo(Chart);

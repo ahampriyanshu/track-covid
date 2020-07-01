@@ -22,9 +22,21 @@
     background-color: transparent !important;
 }
 
+.toggle-button{
+    padding-left: 30%;
+    position: absolute;
+
+}
 
 @media only screen and (max-width: 770px) {
     .header{
         font-size: 6vw !important;
     }
+
+    .toggle-button{
+        padding-left: 70%;
+        position: absolute;
+    
+    }
+
 }
