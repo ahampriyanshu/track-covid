@@ -55,7 +55,7 @@ const pieChart = (
                     <CardContent align='center' className="card-content">
                         <Typography className="card-heading">Confirmed</Typography>
                         <Typography variant="h3" className="card-data">
-                            <CountUp start={0} end={confirmed.value} duration={2.5} separator="," />
+                            <CountUp start={0} end={confirmed.value} duration={1} separator="," />
                         </Typography>
                         {deltaconfirmed > 0 ? <Typography variant='h5' className="card-delta" >+{deltaconfirmed}</Typography> : null}
                     </CardContent>
@@ -64,7 +64,7 @@ const pieChart = (
                     <CardContent align='center'>
                         <Typography className="card-heading">Recovered</Typography>
                         <Typography variant="h3" className="card-data">
-                            <CountUp start={0} end={recovered.value} duration={2.5} separator="," />
+                            <CountUp start={0} end={recovered.value} duration={1} separator="," />
                         </Typography>
                         {deltarecovered > 0 ? <Typography variant='h5' className="card-delta" >+{deltarecovered}</Typography>  : null}
                     </CardContent>
@@ -73,7 +73,7 @@ const pieChart = (
                     <CardContent align='center'>
                         <Typography className="card-heading">Deceased</Typography>
                         <Typography variant="h3" className="card-data">
-                            <CountUp start={0} end={deaths.value} duration={2.5} separator="," />
+                            <CountUp start={0} end={deaths.value} duration={1} separator="," />
                         </Typography>
                         {deltadeaths > 0 ? <Typography variant='h5' className="card-delta" >+{deltadeaths}</Typography> : null}
                     </CardContent>

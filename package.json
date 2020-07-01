@@ -1,7 +1,8 @@
 {
   "name": "track-covid",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "http://track-covid-react.netlify.app/",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
@@ -26,6 +27,9 @@
     "build": "react-scripts build && npm run build-sw",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix --max-warnings=0",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|md|html)\"",
     "build-sw": "node ./src/sw-build.js",
     "start-sw": "http-server ./build -c 0"
   },
@@ -45,6 +49,10 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.6.0"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "prettier": "^2.0.5"
   }
 }

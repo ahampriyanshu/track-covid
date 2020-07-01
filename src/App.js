@@ -14,7 +14,7 @@ const Footer = lazy(() => import('./components/Footer/Footer' /* webpackChunkNam
 function App() {
   const styles = {
     zoomIn: {
-      animation: "x 3s",
+      animation: "x 2.5s",
       animationName: Radium.keyframes(zoomIn, "zoomIn"),
     },
   };
