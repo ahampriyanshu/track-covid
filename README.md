@@ -10,10 +10,11 @@
 
 ## Setup
 
-```
-git clone https://github.com/PriyanshuMay/track-covid.git
-cd track-covid
+```bash
+<p align="center">
+git clone https://github.com/PriyanshuMay/track-covid.git && cd track-covid
 npm i && npm start
+</p>
 ```
 ## Hosted on Netlify
 
