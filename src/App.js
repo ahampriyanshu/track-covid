@@ -50,7 +50,17 @@ function App() {
   });
 
   return (
-    <>
+    <div
+      style={{
+        height: '100%',
+        position: 'absolute',
+        left: '0px',
+        right: '0px',
+        top: '0px',
+        width: '100%',
+        overflowX: 'hidden',
+      }}
+    >
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <CssBaseline />
         <Paper elevation={0}>
@@ -85,7 +95,7 @@ function App() {
           </Suspense>
         </Paper>
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 

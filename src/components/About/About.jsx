@@ -1,45 +1,47 @@
-import React from "react";
-import Card from "@material-ui/core/Card";
-import * as Icon from "react-feather";
+import mui from '../../images/mui.png';
+import net from '../../images/netlify.png';
+import react from '../../images/react.png';
+import virus from '../../images/rotating.png';
+
 import {
   CardContent,
   CardHeader,
   Grid,
   Typography,
   Link,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import virus from "../../images/rotating.png";
-import react from "../../images/react.png";
-import mui from "../../images/mui.png";
-import net from "../../images/netlify.png";
-import "./About.css";
+} from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import {makeStyles} from '@material-ui/core/styles';
+import React from 'react';
+import * as Icon from 'react-feather';
+
+import './About.css';
 
 const useStyles = makeStyles((theme) => ({
   card: {
     borderRadius: 0,
-    boxShadow: "none",
+    boxShadow: 'none',
   },
-  "@global": {
+  '@global': {
     fontFamily: `"Courier"`,
     ul: {
       margin: 0,
       padding: 0,
-      listStyle: "none",
+      listStyle: 'none',
     },
   },
   heroContent: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor: "none",
+    backgroundColor: 'none',
     fontSize: 16,
   },
   CardContent: {
-    backgroundColor: "none",
+    backgroundColor: 'none',
   },
 }));
 
@@ -57,7 +59,7 @@ const tiers = [
     subheader: <span className="subheader"> About Me </span>,
     description: [
       <Link color="inherit" underline="none" href=" ">
-        {" "}
+        {' '}
         <Icon.GitHub />
         <span className="card-span"> Priyanshumay </span>
       </Link>,
@@ -66,7 +68,7 @@ const tiers = [
         underline="none"
         href="https://www.linkedin.com/in/priyanshu-tiwari-b85a7a194"
       >
-        {" "}
+        {' '}
         <Icon.Linkedin />
         <span className="card-span"> Priyanshu Tiwari </span>
       </Link>,
@@ -75,7 +77,7 @@ const tiers = [
         underline="none"
         href="https://lab.gdy.club/~priyanshumay/"
       >
-        {" "}
+        {' '}
         <Icon.Activity />
         <span className="card-span"> Some Projects </span>
       </Link>,
@@ -84,7 +86,7 @@ const tiers = [
         underline="none"
         href="https://github.com/PriyanshuMay?tab=repositories"
       >
-        {" "}
+        {' '}
         <Icon.Code />
         <span className="card-span"> More SourceCode </span>
       </Link>,
@@ -93,7 +95,7 @@ const tiers = [
         underline="none"
         href="mailto:tiwarimay2002@gmail.com"
       >
-        <span className="card-span"> tiwarimay2002@gmail.com </span>{" "}
+        <span className="card-span"> tiwarimay2002@gmail.com </span>{' '}
       </Link>,
     ],
   },
@@ -104,7 +106,7 @@ const tiers = [
         underline="none"
         href="https://github.com/PriyanshuMay/track-covid"
       >
-        {" "}
+        {' '}
         <img src={virus} alt="logo" className="project-logo" />
         <span className="card-span"> </span>
       </Link>
@@ -156,7 +158,7 @@ const tiers = [
   {
     title: (
       <Link color="inherit" underline="none" href=" ">
-        {" "}
+        {' '}
         <Icon.Database />
         <span className="card-span"> </span>
       </Link>
@@ -256,12 +258,12 @@ function Main() {
       >
         {tiers.map((tier) => (
           <Grid item key={tier.title} xs={12} sm={6} md={2}>
-            <Card classes={{ root: classes.card }}>
+            <Card classes={{root: classes.card}}>
               <CardHeader
                 title={tier.title}
                 subheader={tier.subheader}
-                titleTypographyProps={{ align: "center" }}
-                subheaderTypographyProps={{ align: "center" }}
+                titleTypographyProps={{align: 'center'}}
+                subheaderTypographyProps={{align: 'center'}}
                 className={classes.cardHeader}
               />
               <CardContent className={classes.CardContent}>
@@ -282,12 +284,13 @@ function Main() {
           </Grid>
         ))}
       </Grid>
-      <br /><br />
+      <br />
+      <br />
     </React.Fragment>
   );
 }
 
-const About = ({ value, index }) => {
+const About = ({value, index}) => {
   if (value !== index) return null;
 
   return Main();
