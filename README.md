@@ -3,10 +3,42 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 <p align="center" >
+ 
+## On Desktop
+
 <img src="pc.gif" width="100%">
+
 <br><br>
+
+## On Mobile
+
 <img src="mobile.gif" width="40%">
 </p>
+
+| Dependency | Version |
+| --- | --- | 
+| facebook / react| 16.13.1 | 
+| facebook / react react-dom |16.13.1 |
+| material-ui/core | 4.10.2
+| material-ui/icons | 4.9.1
+| testing-library/react | 9.5.0
+| testing-library/jest-dom | 4.2.4
+| axios / axios | 0.19.2
+| chartjs / Chart.js chart.js | 2.9.3
+| JedWatson / classnames | 2.2.6
+| prettier / eslint-config-prettier | 6.11.0
+| prettier / eslint-plugin-prettier | 3.1.4
+| yannickcr / eslint-plugin-react | 7.20.3
+| okonet / lint-staged | 10.2.11
+| eslint / eslint | 6.8.0
+| feathericons / feather feather-icons | 4.28.0
+| FormidableLabs / radium | 0.26.0
+| yannickcr / eslint-plugin-react | 7.20.3
+| FormidableLabs / react-animations | 1.0.0
+| jerairrest / react-chartjs-2 | 2.9.0
+| prettier / prettier | 2.0.5
+| feathericons / react-feather | 2.0.8
+| glennreyes / react-countup | 4.3.3
 
 ## Setup
 
