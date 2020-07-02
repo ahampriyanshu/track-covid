@@ -1,3 +1,5 @@
+import SelectionTabs from './components/SelectionTabs/SelectionTabs.jsx';
+
 import {ThemeProvider, Paper} from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
@@ -6,13 +8,9 @@ import Radium, {StyleRoot} from 'radium';
 import React, {useState, Suspense, lazy} from 'react';
 import {zoomIn} from 'react-animations/';
 import * as Icon from 'react-feather';
+
 import './App.css';
 
-const SelectionTabs = lazy(() =>
-  import(
-    './components/SelectionTabs/SelectionTabs' /* webpackChunkName: "SelectionTabs" */
-  )
-);
 const Footer = lazy(() =>
   import('./components/Footer/Footer' /* webpackChunkName: "Footer" */)
 );
@@ -86,9 +84,7 @@ function App() {
             </StyleRoot>
           </Suspense>
 
-          <Suspense fallback={<div />}>
-            <SelectionTabs />
-          </Suspense>
+          <SelectionTabs />
 
           <Suspense fallback={<div />}>
             <Footer />

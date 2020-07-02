@@ -1,32 +1,31 @@
-import {Paper, Tabs, Tab} from '@material-ui/core';
-import PublicIcon from '@material-ui/icons/Public';
-import React, {Suspense, lazy, useState, useEffect} from 'react';
-import * as Icon from 'react-feather';
-
-import './SelectionTabs.css';
 import {
   fetchIndiaData,
   fetchIndiaGraphData,
   fetchCntryData,
   fetchDailyData,
 } from '../../api';
+import DataTable from '../DataTable/DataTable.jsx';
+
+import {Paper, Tabs, Tab} from '@material-ui/core';
+import PublicIcon from '@material-ui/icons/Public';
+import React, {Suspense, lazy, useState, useEffect} from 'react';
+import * as Icon from 'react-feather';
+
+import './SelectionTabs.css';
 
 const Cards = lazy(() =>
-  import('../Cards/Cards' /* webpackChunkName: "Cards" */)
+  import('../Cards/Cards.jsx' /* webpackChunkName: "Cards" */)
 );
 const About = lazy(() =>
   import('../About/About' /* webpackChunkName: "About" */)
 );
 const CountryPicker = lazy(() =>
   import(
-    '../CountryPicker/CountryPicker' /* webpackChunkName: "CountryPicker" */
+    '../CountryPicker/CountryPicker.jsx' /* webpackChunkName: "CountryPicker" */
   )
 );
 const Chart = lazy(() =>
-  import('../Chart/Chart' /* webpackChunkName: "Chart" */)
-);
-const DataTable = lazy(() =>
-  import('../DataTable/DataTable.jsx' /* webpackChunkName: "DataTable" */)
+  import('../Chart/Chart.jsx' /* webpackChunkName: "Chart" */)
 );
 
 const SelectionTabs = () => {
@@ -108,9 +107,7 @@ const SelectionTabs = () => {
         <Chart value={value} index={1} graphData={graphData} />
       </Suspense>
 
-      <Suspense fallback={<div />}>
-        <DataTable value={value} index={1} data={data} />
-      </Suspense>
+      <DataTable value={value} index={1} data={data} />
 
       <Suspense fallback={<div />}>
         <CountryPicker
