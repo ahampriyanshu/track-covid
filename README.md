@@ -42,8 +42,14 @@ git clone https://github.com/PriyanshuMay/track-covid.git && cd track-covid
 npm i && npm start
 
 ```
-## Hosted on Netlify
 
 ## Make this CRA-PWA better
  
 * [Contributing Guide](CONTRIBUTING.md)
+
+### 170+ git clones and not even a single fork, 200+ views and not again not even a single star> I guess maybe all of them are Indians as well
+
+<p align="center" >
+<img src="git_traffic.png" width="60%">
+<br>
+</p>
