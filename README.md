@@ -47,7 +47,7 @@ npm i && npm start
  
 * [Contributing Guide](CONTRIBUTING.md)
 
-### 170+ git clones and not even a single fork, 200+ views and not again not even a single star> I guess maybe all of them are Indians as well
+### 170+ git clones and not even a single fork, 200+ views and again not even a single star, I guess maybe all of them are Indians as well
 
 <p align="center" >
 <img src="git_traffic.png" width="60%">
