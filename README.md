@@ -1,7 +1,10 @@
 [![HitCount](http://hits.dwyl.io/priyanshumay/badges.svg)](http://hits.dwyl.io/priyanshumay/badges)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](track-covid-react.netlify.app)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](htrack-covid-react.netlify.app)
+[![Netlify status](https://img.shields.io/netlify/b9a3df9b-086e-422d-9295-82d9b6045b99?style=flat-square)](track-covid-react.netlify.app)
+[![size](https://img.shields.io/github/repo-size/priyanshumay/track-covid?style=flat-square)](track-covid-react.netlify.app)
+[![Website status](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](track-covid-react.netlify.app)
 
 <p align="center" >
 <img src="pc.gif" width="100%">
