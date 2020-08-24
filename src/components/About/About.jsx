@@ -44,7 +44,7 @@ const tiers = [
       <Link
         color="inherit"
         underline="none"
-        href="https://github.com/PriyanshuMay "
+        href="https://github.com/ahampriyanshu "
       >
         <Icon.Coffee />
       </Link>
@@ -54,12 +54,12 @@ const tiers = [
       <Link color="inherit" underline="none" href=" ">
         {' '}
         <Icon.GitHub />
-        <span className="card-span"> Priyanshumay </span>
+        <span className="card-span"> ahampriyanshu </span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
-        href="https://www.linkedin.com/in/priyanshu-tiwari-b85a7a194"
+        href="https://www.linkedin.com/in/ahampriyanshu"
       >
         {' '}
         <Icon.Linkedin />
@@ -77,7 +77,7 @@ const tiers = [
       <Link
         color="inherit"
         underline="none"
-        href="https://github.com/PriyanshuMay?tab=repositories"
+        href="https://github.com/ahampriyanshu?tab=repositories"
       >
         {' '}
         <Icon.Code />
@@ -86,9 +86,9 @@ const tiers = [
       <Link
         color="inherit"
         underline="none"
-        href="mailto:tiwarimay2002@gmail.com"
+        href="mailto:ahampriyanshu@gmail.com"
       >
-        <span className="card-span"> tiwarimay2002@gmail.com </span>{' '}
+        <span className="card-span"> ahampriyanshu@gmail.com </span>{' '}
       </Link>,
     ],
   },
@@ -97,7 +97,7 @@ const tiers = [
       <Link
         color="inherit"
         underline="none"
-        href="https://github.com/PriyanshuMay/track-covid"
+        href="https://github.com/ahampriyanshu/track-covid"
       >
         {' '}
         <img src={virus} alt="logo" className="project-logo" />
@@ -161,7 +161,7 @@ const tiers = [
       <Link
         color="inherit"
         underline="none"
-        href="git@github.com:PriyanshuMay/track-covid.git"
+        href="git@github.com:ahampriyanshu/track-covid.git"
       >
         <Icon.Download />
         <span className="card-span"> Download Source Code </span>

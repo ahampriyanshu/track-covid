@@ -39,7 +39,7 @@ const Footer = () => {
           <Link
             color="inherit"
             underline="none"
-            href="https://github.com/PriyanshuMay"
+            href="https://github.com/ahampriyanshu"
           >
             {' '}
             <Icon.GitHub />{' '}
@@ -59,7 +59,7 @@ const Footer = () => {
           <Link
             color="inherit"
             underline="none"
-            href="https://github.com/PriyanshuMay/track-covid"
+            href="https://github.com/ahampriyanshu/track-covid"
           >
             {' '}
             <Icon.Download />{' '}

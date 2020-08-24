@@ -42,16 +42,13 @@ Setup
 .. code:: bash
 
 
-   git clone https://github.com/PriyanshuMay/track-covid.git && cd track-covid
+   git clone https://github.com/ahampriyanshu/track-covid.git && cd track-covid
    npm i && npm start
 
 Make this CRA-PWA better
 ------------------------
 
 -  `Contributing Guide`_
-
-170+ git clones and not even a single fork, 200+ views and again not even a single star, I guess maybe all of them are Indians as well
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. raw:: html
 
@@ -63,8 +60,8 @@ Make this CRA-PWA better
 
 .. _Contributing Guide: CONTRIBUTING.md
 
-.. |HitCount| image:: http://hits.dwyl.io/priyanshumay/badges.svg
-   :target: http://hits.dwyl.io/priyanshumay/badges
+.. |HitCount| image:: http://hits.dwyl.io/ahampriyanshu/badges.svg
+   :target: http://hits.dwyl.io/ahampriyanshu/badges
 .. |PRs Welcome| image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
    :target: http://makeapullrequest.com
 .. |MIT license| image:: https://img.shields.io/badge/License-MIT-blue.svg
@@ -73,7 +70,7 @@ Make this CRA-PWA better
    :target: htrack-covid-react.netlify.app
 .. |Netlify status| image:: https://img.shields.io/netlify/b9a3df9b-086e-422d-9295-82d9b6045b99?style=flat-square
    :target: track-covid-react.netlify.app
-.. |size| image:: https://img.shields.io/github/repo-size/priyanshumay/track-covid?style=flat-square
+.. |size| image:: https://img.shields.io/github/repo-size/ahampriyanshu/track-covid?style=flat-square
    :target: track-covid-react.netlify.app
 .. |Website status| image:: https://img.shields.io/website-up-down-green-red/http/shields.io.svg
    :target: track-covid-react.netlify.app
