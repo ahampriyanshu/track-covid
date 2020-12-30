@@ -74,12 +74,12 @@ const Cards = ({data, value, index}) => {
           item
           component={Card}
           xs={3}
-          md={3}
+          md={2}
           className="card-card card-infected"
         >
           <CardContent align="center" className="card-content">
             <Typography className="card-heading">Confirmed</Typography>
-            <Typography variant="h3" className="card-data">
+            <Typography variant="h4" className="card-data">
               <CountUp
                 start={0}
                 end={confirmed.value}
@@ -98,12 +98,12 @@ const Cards = ({data, value, index}) => {
           item
           component={Card}
           xs={3}
-          md={3}
+          md={2}
           className="card-card card-recovered"
         >
           <CardContent align="center">
             <Typography className="card-heading">Recovered</Typography>
-            <Typography variant="h3" className="card-data">
+            <Typography variant="h4" className="card-data">
               <CountUp
                 start={0}
                 end={recovered.value}
@@ -122,12 +122,12 @@ const Cards = ({data, value, index}) => {
           item
           component={Card}
           xs={3}
-          md={3}
+          md={2}
           className="card-card card-deaths"
         >
           <CardContent align="center">
             <Typography className="card-heading">Deceased</Typography>
-            <Typography variant="h3" className="card-data">
+            <Typography variant="h4" className="card-data">
               <CountUp
                 start={0}
                 end={deaths.value}

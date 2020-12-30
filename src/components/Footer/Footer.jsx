@@ -19,7 +19,7 @@ const Footer = () => {
           <Link
             color="inherit"
             underline="none"
-            href="https://gdy.club/priyanshu"
+            href="https://ahampriyanshu.github.io"
           >
             {' '}
             <Icon.Link2 />{' '}
@@ -29,7 +29,7 @@ const Footer = () => {
           <Link
             color="inherit"
             underline="none"
-            href="mailto:tiwarimay2002@gmail.com"
+            href="mailto:ahampriyanshu@gmail.com"
           >
             {' '}
             <Icon.Mail />{' '}
@@ -49,7 +49,7 @@ const Footer = () => {
           <Link
             color="inherit"
             underline="none"
-            href="https://www.linkedin.com/in/priyanshu-tiwari-b85a7a194"
+            href="https://www.linkedin.com/in/ahampriyanshu"
           >
             {' '}
             <Icon.Linkedin />{' '}

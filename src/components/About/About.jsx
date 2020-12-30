@@ -1,8 +1,6 @@
 import mui from '../../images/mui.png';
 import net from '../../images/netlify.png';
 import react from '../../images/react.png';
-import virus from '../../images/rotating.png';
-
 import {
   CardContent,
   CardHeader,
@@ -13,8 +11,6 @@ import {
 import Card from '@material-ui/core/Card';
 import {makeStyles} from '@material-ui/core/styles';
 import React from 'react';
-import * as Icon from 'react-feather';
-
 import './About.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -46,15 +42,13 @@ const tiers = [
         underline="none"
         href="https://github.com/ahampriyanshu "
       >
-        <Icon.Coffee />
       </Link>
     ),
-    subheader: <span className="subheader"> About Me </span>,
+    subheader: <span className="subheader">About Me </span>,
     description: [
       <Link color="inherit" underline="none" href=" ">
         {' '}
-        <Icon.GitHub />
-        <span className="card-span"> ahampriyanshu </span>
+        <span className="card-span">ahampriyanshu</span>
       </Link>,
       <Link
         color="inherit"
@@ -62,17 +56,15 @@ const tiers = [
         href="https://www.linkedin.com/in/ahampriyanshu"
       >
         {' '}
-        <Icon.Linkedin />
-        <span className="card-span"> Priyanshu Tiwari </span>
+        <span className="card-span">Priyanshu Tiwari</span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
-        href="https://lab.gdy.club/~priyanshumay/"
+        href="https://ahampriyanshu.github.io"
       >
         {' '}
-        <Icon.Activity />
-        <span className="card-span"> Some Projects </span>
+        <span className="card-span">Some Projects</span>
       </Link>,
       <Link
         color="inherit"
@@ -80,15 +72,13 @@ const tiers = [
         href="https://github.com/ahampriyanshu?tab=repositories"
       >
         {' '}
-        <Icon.Code />
-        <span className="card-span"> More SourceCode </span>
+        <span className="card-span">More SourceCode</span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
         href="mailto:ahampriyanshu@gmail.com"
-      >
-        <span className="card-span"> ahampriyanshu@gmail.com </span>{' '}
+      ><span className="card-span">ahampriyanshu@gmail.com</span>{' '}
       </Link>,
     ],
   },
@@ -100,18 +90,16 @@ const tiers = [
         href="https://github.com/ahampriyanshu/track-covid"
       >
         {' '}
-        <img src={virus} alt="logo" className="project-logo" />
         <span className="card-span"> </span>
       </Link>
     ),
-    subheader: <span className="subheader"> Truly OpenSource </span>,
+    subheader: <span className="subheader">Dependencies</span>,
     description: [
       <Link
         color="inherit"
         underline="none"
         href="https://github.com/facebook/react"
       >
-        <Icon.GitHub />
         <span className="card-span"> React </span>
       </Link>,
       <Link
@@ -119,7 +107,6 @@ const tiers = [
         underline="none"
         href="https://www.npmjs.com/package/@material-ui/core"
       >
-        <Icon.Package />
         <span className="card-span"> Material Ui </span>
       </Link>,
       <Link
@@ -127,7 +114,6 @@ const tiers = [
         underline="none"
         href="https://www.npmjs.com/package/axios"
       >
-        <Icon.Package />
         <span className="card-span"> Axios </span>
       </Link>,
       <Link
@@ -135,7 +121,6 @@ const tiers = [
         underline="none"
         href="https://www.npmjs.com/package/react-chartjs-2"
       >
-        <Icon.Package />
         <span className="card-span"> Chart-js-2 </span>
       </Link>,
       <Link
@@ -143,7 +128,6 @@ const tiers = [
         underline="none"
         href="https://www.npmjs.com/package/feather-icons"
       >
-        <Icon.Package />
         <span className="card-span"> Feather Icons </span>
       </Link>,
     ],
@@ -152,51 +136,45 @@ const tiers = [
     title: (
       <Link color="inherit" underline="none" href=" ">
         {' '}
-        <Icon.Database />
         <span className="card-span"> </span>
       </Link>
     ),
-    subheader: <span className="subheader"> DataSources </span>,
+    subheader: <span className="subheader">Source</span>,
     description: [
       <Link
         color="inherit"
         underline="none"
         href="git@github.com:ahampriyanshu/track-covid.git"
       >
-        <Icon.Download />
-        <span className="card-span"> Download Source Code </span>
+        <span className="card-span">Source Code </span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
         href="https://api.covid19india.org/"
       >
-        <Icon.Link2 />
-        <span className="card-span"> Source for Indian data </span>
+        <span className="card-span">Local data </span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
         href="https://covid19.mathdro.id/api"
       >
-        <Icon.Link2 />
-        <span className="card-span"> Source for global data </span>
+        <span className="card-span">Global data </span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
         href="https://raw.githubusercontent.com/covid19india/api/gh-pages/raw_data.json"
       >
-        <Icon.Download />
-        <span className="card-span"> Download data as JSON </span>
+        <span className="card-span">JSON </span>
       </Link>,
       <Link
         color="inherit"
         underline="none"
         href="https://raw.githubusercontent.com/covid19india/api/gh-pages/csv/latest/raw_data.csv"
       >
-        <Icon.Download />
-        <span className="card-span"> Download data as CSV </span>
+        <span className="card-span">CSV </span>
       </Link>,
     ],
   },
