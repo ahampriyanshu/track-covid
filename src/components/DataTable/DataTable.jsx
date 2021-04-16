@@ -37,18 +37,14 @@ const DataTable = ({data, value, index}) => {
   const [orderBy, setOrderBy] = useState('confirmed');
   const [order, setOrder] = useState('desc');
 
-  let firstLabel = ' ',
-    lastUpdate = '';
+  let firstLabel = ' ';
 
   if (value !== index) return null;
-
   if (index === 1) {
     firstLabel = 'State/UT';
-    lastUpdate = '';
     data = data && data.stateData ? data.stateData : [];
   } else if (index === 2) {
     firstLabel = 'Country';
-    lastUpdate = '';
   }
 
   const headCells = [
@@ -72,12 +68,10 @@ const DataTable = ({data, value, index}) => {
           confirmed,
           recovered,
           deaths,
-          lastUpdated,
           deltaconfirmed,
           deltadeaths,
           deltarecovered,
         }) => {
-          if (!lastUpdate) lastUpdate = lastUpdated;
           return (
             <TableRow key={stateName} hover>
               <TableCell

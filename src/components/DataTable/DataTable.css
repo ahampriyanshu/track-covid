@@ -2,13 +2,8 @@
 border: none !important; 
 }
 
-.random{
-    color:rgba(255, 0, 0, 0.9) !important;
-    }
-
 .datatable-container {
     border: none !important; 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +17,7 @@ border: none !important;
 }
 
 .counterConfirmed{
-    color: #BB86FC;
+    color: rgba(187, 134, 252, 1);
 }
 
 .counterRecovered{
@@ -55,13 +50,13 @@ border: none !important;
         font-size: 40px !important;
     }
     .paper{
-        width: 100%;
+        width: 90%;
     
     }
     .table-cell {
         border-bottom: none !important; 
-        padding-left: 2vw !important;
-        padding-right: 2vw !important;
+        padding-left: 1.5vw !important;
+        padding-right: 1.5vw !important;
         font-size: 2.5vw !important;
     }
     .t-head {

@@ -1,61 +1,68 @@
 import React from 'react';
 import {Line, Bar} from 'react-chartjs-2';
-
 import './Chart.css';
+
+const lastUpdated = new Date().toLocaleDateString();
 
 const Chart = ({graphData, value, index, country}) => {
   if (value !== index) return null;
-
   let dataset = [],
-    title = '',
-    isGraphDataArr = graphData && Array.isArray(graphData);
+  title = '',
+  isGraphDataArr = graphData && Array.isArray(graphData);
 
   if ((index === 0 || index === 1) && isGraphDataArr) {
     dataset = [
       {
         data: isGraphDataArr ? graphData.map(({confirmed}) => confirmed) : [],
         label: 'Confirmed',
-        borderColor: 'rgba(0, 0, 255, 0.5)',
+        borderColor: 'rgba(187, 134, 252, 1)',
         fill: false,
       },
       {
         data: isGraphDataArr ? graphData.map(({recovered}) => recovered) : [],
         label: 'Recovered',
-        borderColor: 'rgba(0, 255, 0, 0.5)',
+        borderColor: 'rgba(0, 255, 0, 0.7)',
         fill: false,
       },
       {
         data: isGraphDataArr ? graphData.map(({deaths}) => deaths) : [],
         label: 'Deceased',
-        borderColor: 'rgba(255, 0, 0, 0.5)',
+        borderColor: 'rgba(255, 0, 0, 0.7)',
         fill: false,
       },
     ];
-    title = `Daily Cases Timeline`;
+    title = `Last updated on ${lastUpdated}`;
   } else if (index === 2 && isGraphDataArr) {
     dataset = [
       {
         data: graphData.map(({confirmed}) => confirmed),
         label: 'Confirmed',
-        borderColor: 'rgba(0, 0, 255, 0.5)',
+        borderColor: 'rgba(187, 134, 252, 1)',
         fill: true,
-        backgroundColor: 'rgba(0, 0, 255, 0.4)',
+        backgroundColor: 'rgba(187, 134, 252, 0.2)',
+      },
+      {
+        data: graphData.map(({recovered}) => recovered),
+        label: 'Recovered',
+        borderColor: 'rgba(0, 255, 0, 0.5)',
+        fill: true,
+        backgroundColor: 'rgba(0, 255, 0, 0.8)',
       },
       {
         data: graphData.map(({deaths}) => deaths),
         label: 'Deceased',
-        borderColor: 'rgba(255, 0, 0, 1)',
+        borderColor: 'rgba(255, 0, 0, 0.5)',
         fill: true,
-        backgroundColor: 'rgba(255, 0, 0, 1)',
+        backgroundColor: 'rgba(255, 0, 0, 1.0)',
       },
     ];
-    title = `Daily Cases Growth`;
+    title = `Last updated on ${lastUpdated}`;
   } else if (index === 2 && !isGraphDataArr) {
     dataset = [
       {
-        label: 'People',
+        label: 'Cases',
         backgroundColor: [
-          'rgba(0, 0, 255, 0.5)',
+          'rgba(187, 134, 252, 0.7)',
           'rgba(0, 255, 0, 0.5)',
           'rgba(255, 0, 0, 0.5)',
         ],
@@ -66,7 +73,7 @@ const Chart = ({graphData, value, index, country}) => {
         ],
       },
     ];
-    title = `Current status in ${country}`;
+    title = `Last updated on ${lastUpdated}`;
   }
 
   const lineChart =

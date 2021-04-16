@@ -1,6 +1,6 @@
 {
   "name": "track-covid",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "homepage": "http://track-covid-react.netlify.app/",
   "dependencies": {
