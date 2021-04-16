@@ -7,6 +7,7 @@ import {
   Grid,
   Typography,
   Link,
+  Box
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import {makeStyles} from '@material-ui/core/styles';
@@ -36,110 +37,6 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: (
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://github.com/ahampriyanshu "
-      >
-      </Link>
-    ),
-    subheader: <span className="subheader">About Me </span>,
-    description: [
-      <Link color="inherit" underline="none" href=" ">
-        {' '}
-        <span className="card-span">ahampriyanshu</span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://www.linkedin.com/in/ahampriyanshu"
-      >
-        {' '}
-        <span className="card-span">Priyanshu Tiwari</span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://ahampriyanshu.github.io"
-      >
-        {' '}
-        <span className="card-span">Some Projects</span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://github.com/ahampriyanshu?tab=repositories"
-      >
-        {' '}
-        <span className="card-span">More SourceCode</span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="mailto:ahampriyanshu@gmail.com"
-      ><span className="card-span">ahampriyanshu@gmail.com</span>{' '}
-      </Link>,
-    ],
-  },
-  {
-    title: (
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://github.com/ahampriyanshu/track-covid"
-      >
-        {' '}
-        <span className="card-span"> </span>
-      </Link>
-    ),
-    subheader: <span className="subheader">Dependencies</span>,
-    description: [
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://github.com/facebook/react"
-      >
-        <span className="card-span"> React </span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://www.npmjs.com/package/@material-ui/core"
-      >
-        <span className="card-span"> Material Ui </span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://www.npmjs.com/package/axios"
-      >
-        <span className="card-span"> Axios </span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://www.npmjs.com/package/react-chartjs-2"
-      >
-        <span className="card-span"> Chart-js-2 </span>
-      </Link>,
-      <Link
-        color="inherit"
-        underline="none"
-        href="https://www.npmjs.com/package/feather-icons"
-      >
-        <span className="card-span"> Feather Icons </span>
-      </Link>,
-    ],
-  },
-  {
-    title: (
-      <Link color="inherit" underline="none" href=" ">
-        {' '}
-        <span className="card-span"> </span>
-      </Link>
-    ),
-    subheader: <span className="subheader">Source</span>,
     description: [
       <Link
         color="inherit"
@@ -185,8 +82,7 @@ function Main() {
 
   return (
     <React.Fragment>
-      <br />
-      <br />
+      <Box m={4}>
       <Grid
         container
         spacing={6}
@@ -217,8 +113,7 @@ function Main() {
           </span>
         </Grid>
       </Grid>
-      <br />
-      <br />
+      </Box>
       <Grid
         container
         spacing={3}
@@ -228,11 +123,9 @@ function Main() {
         align="center"
       >
         {tiers.map((tier) => (
-          <Grid item key={tier.title} xs={12} sm={6} md={2}>
+          <Grid item key={tier.title} xs={12} sm={6} md={3}>
             <Card classes={{root: classes.card}}>
               <CardHeader
-                title={tier.title}
-                subheader={tier.subheader}
                 titleTypographyProps={{align: 'center'}}
                 subheaderTypographyProps={{align: 'center'}}
                 className={classes.cardHeader}

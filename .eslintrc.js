@@ -6,7 +6,6 @@ module.exports = {
   extends: ['plugin:react/recommended', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
   },
   parser: 'babel-eslint',
   parserOptions: {

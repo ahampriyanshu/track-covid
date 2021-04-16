@@ -1,4 +1,4 @@
-import {Link, Grid} from '@material-ui/core/';
+import { Link, Grid } from '@material-ui/core/';
 import React from 'react';
 import * as Icon from 'react-feather';
 import './Footer.css';
@@ -9,15 +9,14 @@ const Footer = () => {
       <br />
       <Grid
         container
-        spacing={12}
-        direction="coloumn"
+        spacing={2}
+        direction="row"
         alignItems="center"
         justify="center"
         align="center"
       >
-        <Grid item xs={2} md={2}>
-          <Link
-            color="inherit"
+        <Grid item xs={2} md={1}>
+          <Link color="inherit"
             underline="none"
             href="https://ahampriyanshu.github.io"
           >
@@ -25,9 +24,17 @@ const Footer = () => {
             <Icon.Link2 />{' '}
           </Link>
         </Grid>
-        <Grid item xs={2} md={2}>
-          <Link
-            color="inherit"
+        <Grid item xs={2} md={1}>
+          <Link color="inherit"
+            underline="none"
+            href=" https://t.me/ahampriyanshu"
+          >
+            {' '}
+            <Icon.Send />{' '}
+          </Link>
+        </Grid>
+        <Grid item xs={2} md={1}>
+          <Link color="inherit"
             underline="none"
             href="mailto:ahampriyanshu@gmail.com"
           >
@@ -35,9 +42,8 @@ const Footer = () => {
             <Icon.Mail />{' '}
           </Link>
         </Grid>
-        <Grid item xs={2} md={2}>
-          <Link
-            color="inherit"
+        <Grid item xs={2} md={1}>
+          <Link color="inherit"
             underline="none"
             href="https://github.com/ahampriyanshu"
           >
@@ -45,24 +51,13 @@ const Footer = () => {
             <Icon.GitHub />{' '}
           </Link>
         </Grid>
-        <Grid item xs={2} md={2}>
-          <Link
-            color="inherit"
+        <Grid item xs={2} md={1}>
+          <Link color="inherit"
             underline="none"
             href="https://www.linkedin.com/in/ahampriyanshu"
           >
             {' '}
             <Icon.Linkedin />{' '}
-          </Link>
-        </Grid>
-        <Grid item xs={2} md={2}>
-          <Link
-            color="inherit"
-            underline="none"
-            href="https://github.com/ahampriyanshu/track-covid"
-          >
-            {' '}
-            <Icon.Download />{' '}
           </Link>
         </Grid>
       </Grid>

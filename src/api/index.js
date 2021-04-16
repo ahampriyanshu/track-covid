@@ -1,14 +1,13 @@
 import axios from 'axios';
 
-const apiUrl = 'https://api.covid19india.org';
-
-const cntryApiUrl = 'https://covid19.mathdro.id/api';
+const indiaApi = 'https://api.covid19india.org';
+const globalApi = 'https://covid19.mathdro.id/api';
 
 export const fetchIndiaData = async () => {
   try {
     const {
       data: {statewise},
-    } = await axios.get(`${apiUrl}/data.json`);
+    } = await axios.get(`${indiaApi}/data.json`);
 
     const stateData = statewise
       .filter((a, b) => a.state !== 'Total')
@@ -20,10 +19,10 @@ export const fetchIndiaData = async () => {
           active,
           recovered,
           deaths,
-          lastupdatedtime,
           deltaconfirmed,
-          deltadeaths,
           deltarecovered,
+          deltadeaths,
+          lastUpdated,
         }) => {
           return {
             stateName: state,
@@ -34,7 +33,7 @@ export const fetchIndiaData = async () => {
             deltaconfirmed: parseInt(deltaconfirmed),
             deltarecovered: parseInt(deltarecovered),
             deltadeaths: parseInt(deltadeaths),
-            lastUpdated: lastupdatedtime,
+            lastUpdated: lastUpdated,
           };
         }
       );
@@ -48,8 +47,7 @@ export const fetchIndiaData = async () => {
           deltaconfirmed,
           deltadeaths,
           deltarecovered,
-          lastupdatedtime,
-          statenotes,
+          lastUpdated,
         }) => {
           return {
             confirmed: {value: parseInt(confirmed)},
@@ -58,8 +56,7 @@ export const fetchIndiaData = async () => {
             deltaconfirmed: parseInt(deltaconfirmed),
             deltarecovered: parseInt(deltarecovered),
             deltadeaths: parseInt(deltadeaths),
-            lastUpdatetot: lastupdatedtime,
-            news: statenotes,
+            lastUpdated: lastUpdated,
           };
         }
       );
@@ -73,8 +70,7 @@ export const fetchIndiaGraphData = async () => {
   try {
     const {
       data: {cases_time_series},
-    } = await axios.get(`${apiUrl}/data.json`);
-    // const stateData = data.filter((state) => state.state === "Tamil Nadu")
+    } = await axios.get(`${indiaApi}/data.json`);
     const graphData = cases_time_series.map(
       ({dailyconfirmed, dailydeceased, dailyrecovered}) => {
         return {
@@ -90,26 +86,27 @@ export const fetchIndiaGraphData = async () => {
   }
 };
 
-export const fetchCntryData = async (country) => {
+export const fetchGlobalData = async (country) => {
   let changeableUrl = !country
-    ? cntryApiUrl
-    : `${cntryApiUrl}/countries/${country}`;
+    ? globalApi
+    : `${globalApi}/countries/${country}`;
   try {
     const {
       data: {confirmed, recovered, deaths, lastUpdate},
     } = await axios.get(changeableUrl);
     return {confirmed, recovered, deaths, lastUpdate};
   } catch (error) {
-    console.log('fetchCntryData -> error', error);
+    console.log('fetchGlobalData -> error', error);
   }
 };
 
 export const fetchDailyData = async () => {
   try {
-    const {data} = await axios.get(`${cntryApiUrl}/daily`);
+    const {data} = await axios.get(`${globalApi}/daily`);
     const modifiedData = data.map((dailyData) => ({
       confirmed: dailyData.confirmed.total,
       deaths: dailyData.deaths.total,
+      recovered:dailyData.confirmed.total - dailyData.deaths.total,
       date: dailyData.reportDate,
     }));
     return modifiedData;
@@ -122,7 +119,7 @@ export const fetchCountries = async () => {
   try {
     const {
       data: {countries},
-    } = await axios.get(`${cntryApiUrl}/countries`);
+    } = await axios.get(`${globalApi}/countries`);
     return countries;
   } catch (error) {
     console.log('fetchCountries -> error', error);

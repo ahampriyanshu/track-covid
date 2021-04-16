@@ -1,21 +1,18 @@
 import Rotating from '../Rotating/Rotating.jsx';
-
-import {Card, CardContent, Typography, Grid} from '@material-ui/core';
+import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import React from 'react';
-import {Pie} from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import CountUp from 'react-countup';
 
 import './Cards.css';
 
-const Cards = ({data, value, index}) => {
+const Cards = ({ data, value, index }) => {
   if (value !== index) return null;
 
   const {
     confirmed,
     recovered,
     deaths,
-    lastUpdate,
-    lastUpdatetot,
     deltaconfirmed,
     deltadeaths,
     deltarecovered,
@@ -25,25 +22,6 @@ const Cards = ({data, value, index}) => {
     return <Rotating />;
   }
 
-  const lastUpdated = lastUpdate ? (
-    <Typography variant="h6" className="random" display="block" align="center">
-      {new Date(lastUpdate).toLocaleString()} IST
-    </Typography>
-  ) : null;
-
-  const lastUpdatedTime = lastUpdatetot ? (
-    <Typography className="random" variant="h6" display="block" align="center">
-      {lastUpdatetot} IST
-    </Typography>
-  ) : null;
-
-  const stillActive = confirmed ? (
-    <Typography className="active" variant="h6" display="block" align="center">
-      Active Cases left{' '}
-      {(confirmed.value - (recovered.value + deaths.value)).toLocaleString()}
-    </Typography>
-  ) : null;
-
   const pieChart = confirmed ? (
     <Pie
       data={{
@@ -52,7 +30,7 @@ const Cards = ({data, value, index}) => {
           {
             label: 'People',
             backgroundColor: [
-              'rgba(0, 0, 255, 0.5)',
+              'rgba(187, 134, 252, 1)',
               'rgba(0, 255, 0, 0.5)',
               'rgba(255, 0, 0, 0.5)',
             ],
@@ -61,6 +39,7 @@ const Cards = ({data, value, index}) => {
               recovered.value,
               deaths.value,
             ],
+            borderColor: ['rgba(187, 134, 252, 0.2)','rgba(0, 255, 0, 0.2)','rgba(255, 0, 0, 0.2)']
           },
         ],
       }}
@@ -144,16 +123,11 @@ const Cards = ({data, value, index}) => {
         </Grid>
       </Grid>
       <br />
-      {lastUpdated}
-      {lastUpdatedTime}
-      <br />
       <Grid container justify="center">
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6}>
           {pieChart}
         </Grid>
       </Grid>
-      <br />
-      {stillActive}
     </div>
   );
 };
