@@ -6,22 +6,25 @@
 [![Website status](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](track-covid-react.netlify.app)
 
 ## Desktop view
+
 <p align="center" >
 <img src="https://user-images.githubusercontent.com/54521023/103330786-fc125680-4a88-11eb-84cc-ea9fa84ea84d.gif" width="100%">
 </p>
 
 ## Mobile view
+
 <p align="center" >
 <img src="https://user-images.githubusercontent.com/54521023/103331099-552eba00-4a8a-11eb-8720-f90ca0ae1493.gif" width="40%">
 </p>
 
 ## Dependencies
 
-* [react-js](https://github.com/facebook/react)
-* [material-ui](https://www.npmjs.com/package/@material-ui/core)
-* [axios](https://www.npmjs.com/package/axios)
-* [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
-* [feather-icons](https://www.npmjs.com/package/feather-icons)
+- [react-js](https://github.com/facebook/react)
+- [material-ui](https://www.npmjs.com/package/@material-ui/core)
+- [axios](https://www.npmjs.com/package/axios)
+- [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
+- [feather-icons](https://www.npmjs.com/package/feather-icons)
+
 ## Setup
 
 ```bash
@@ -31,8 +34,8 @@ npm i && npm start
 
 ## Deployment
 
-* To deploy on netlify click [here](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
+- To deploy on netlify click [here](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
 
 ## Contribute
- 
-* [Contributing Guide](CONTRIBUTING.md)
+
+- [Contributing Guide](CONTRIBUTING.md)

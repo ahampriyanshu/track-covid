@@ -1,42 +1,39 @@
-.header{
-    font-family: 'Courier New', Courier, monospace !important;
-    font-size: 50px;
-    font-weight: bolder !important;
+.header {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: 50px;
+  font-weight: bolder !important;
 }
 
-.track{
-    color: #f2a365;
+.track {
+  color: #f2a365;
 }
 
-.covid{
-    color:#29c7ac;
+.covid {
+  color: #29c7ac;
 }
 
 .headerCont {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    direction: ltr;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  direction: ltr;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
 }
 
-.toggle-button{
-    padding-left: 30%;
-    position: absolute;
-
+.toggle-button {
+  padding-left: 30%;
+  position: absolute;
 }
 
 @media only screen and (max-width: 770px) {
-    .header{
-        font-size: 6vw !important;
-    }
+  .header {
+    font-size: 6vw !important;
+  }
 
-    .toggle-button{
-        padding-left: 70%;
-        position: absolute;
-    
-    }
-
+  .toggle-button {
+    padding-left: 70%;
+    position: absolute;
+  }
 }

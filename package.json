@@ -1,16 +1,14 @@
 {
   "name": "track-covid",
   "version": "1.2.0",
-  "private": true,
-  "homepage": "http://track-covid-react.netlify.app/",
+  "homepage": "http://ahampriyanshu.github.io/track-covid",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.21.1",
-    "chart.js": "^2.9.3",
+    "axios": "^0.24.0",
     "classnames": "^2.2.6",
     "feather-icons": "^4.28.0",
     "radium": "^0.26.0",
@@ -31,7 +29,9 @@
     "eslint:fix": "eslint --fix --max-warnings=0",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|css|yaml|md|html)\"",
     "build-sw": "node ./src/sw-build.js",
-    "start-sw": "http-server ./build -c 0"
+    "start-sw": "http-server ./build -c 0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -70,6 +70,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
+    "gh-pages": "^3.2.3",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }

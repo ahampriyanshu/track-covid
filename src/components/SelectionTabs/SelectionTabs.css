@@ -1,20 +1,18 @@
 .tab-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .tab-style {
-    width: 50%;
-    margin: none !important;
-    padding: none !important;
+  width: 50%;
+  margin: none !important;
+  padding: none !important;
 }
 
 @media only screen and (max-width: 770px) {
-    .tab-style {
-      width: 100%;
-    }
-
-} 
+  .tab-style {
+    width: 100%;
+  }
+}

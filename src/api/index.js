@@ -1,13 +1,17 @@
 import axios from 'axios';
 
-const indiaApi = 'https://api.covid19india.org';
+const indianApi = 'https://data.covid19india.org';
 const globalApi = 'https://covid19.mathdro.id/api';
 
 export const fetchIndiaData = async () => {
   try {
     const {
       data: {statewise},
-    } = await axios.get(`${indiaApi}/data.json`);
+    } = await axios.get(`${indianApi}/data.json`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
     const stateData = statewise
       .filter((a, b) => a.state !== 'Total')
@@ -70,7 +74,7 @@ export const fetchIndiaGraphData = async () => {
   try {
     const {
       data: {cases_time_series},
-    } = await axios.get(`${indiaApi}/data.json`);
+    } = await axios.get(`${indianApi}/data.json`);
     const graphData = cases_time_series.map(
       ({dailyconfirmed, dailydeceased, dailyrecovered}) => {
         return {
@@ -106,7 +110,7 @@ export const fetchDailyData = async () => {
     const modifiedData = data.map((dailyData) => ({
       confirmed: dailyData.confirmed.total,
       deaths: dailyData.deaths.total,
-      recovered:dailyData.confirmed.total - dailyData.deaths.total,
+      recovered: dailyData.confirmed.total - dailyData.deaths.total,
       date: dailyData.reportDate,
     }));
     return modifiedData;

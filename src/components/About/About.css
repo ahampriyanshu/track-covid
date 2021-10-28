@@ -1,5 +1,5 @@
-.card-span{
-  color:#29c7ac;
+.card-span {
+  color: #29c7ac;
   font-family: 'Courier New', Courier, monospace !important;
   font-weight: bolder !important;
 }
@@ -10,38 +10,37 @@
 }
 
 .project-logo {
-    height: 128px;
-    width: 128px;
+  height: 128px;
+  width: 128px;
 }
 
-.main-span{
-    font-family: 'Courier New', Courier, monospace !important;
-    font-size: 30px;
-    font-weight: bolder !important;
-    letter-spacing:none !important;
+.main-span {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: 30px;
+  font-weight: bolder !important;
+  letter-spacing: none !important;
 }
 
-.react-span{
-    color: #61dbfb;
+.react-span {
+  color: #61dbfb;
 }
 
-.mui-span{
+.mui-span {
   color: #00b0ff;
 }
 
-.net-span{
-  color:#25c7b7;
+.net-span {
+  color: #25c7b7;
 }
-  
-  @media only screen and (max-width: 770px) {
 
-    .project-logo {
-        height: 64px;
-        width: 64px;
-      }
+@media only screen and (max-width: 770px) {
+  .project-logo {
+    height: 64px;
+    width: 64px;
+  }
 
-      .react-logo {
-        height: 64px;
-        width: 88px;
-      }
+  .react-logo {
+    height: 64px;
+    width: 88px;
+  }
 }

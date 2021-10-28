@@ -7,8 +7,8 @@ const lastUpdated = new Date().toLocaleDateString();
 const Chart = ({graphData, value, index, country}) => {
   if (value !== index) return null;
   let dataset = [],
-  title = '',
-  isGraphDataArr = graphData && Array.isArray(graphData);
+    title = '',
+    isGraphDataArr = graphData && Array.isArray(graphData);
 
   if ((index === 0 || index === 1) && isGraphDataArr) {
     dataset = [

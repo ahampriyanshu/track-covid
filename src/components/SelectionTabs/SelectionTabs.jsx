@@ -5,9 +5,9 @@ import {
   fetchDailyData,
 } from '../../api';
 import DataTable from '../DataTable/DataTable.jsx';
-import { Paper, Tabs, Tab } from '@material-ui/core';
+import {Paper, Tabs, Tab} from '@material-ui/core';
 import PublicIcon from '@material-ui/icons/Public';
-import React, { Suspense, lazy, useState, useEffect } from 'react';
+import React, {Suspense, lazy, useState, useEffect} from 'react';
 import * as Icon from 'react-feather';
 import './SelectionTabs.css';
 

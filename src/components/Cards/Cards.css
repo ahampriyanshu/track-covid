@@ -4,13 +4,13 @@
 }
 
 .card-heading {
-    font-family: 'Courier New', Courier, monospace !important;
-  }
+  font-family: 'Courier New', Courier, monospace !important;
+}
 
 .active {
-    font-family: 'Courier New', Courier, monospace !important;
-    color:#29c7ac !important;
-    font-weight: bolder !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  color: #29c7ac !important;
+  font-weight: bolder !important;
 }
 
 .grid-container {
@@ -52,13 +52,13 @@
   .card-data {
     font-size: 4vw !important;
   }
-.card-delta{
-  font-size: 3vw !important;
-}
+  .card-delta {
+    font-size: 3vw !important;
+  }
 
   .active {
     font-size: 4vw !important;
-}
+  }
 
   .card-contentrandom {
     padding-bottom: 0px !important;

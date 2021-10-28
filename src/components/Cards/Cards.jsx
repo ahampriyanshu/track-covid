@@ -1,14 +1,13 @@
 import Rotating from '../Rotating/Rotating.jsx';
-import { Card, CardContent, Typography, Grid } from '@material-ui/core';
+import {Card, CardContent, Typography, Grid} from '@material-ui/core';
 import React from 'react';
-import { Pie } from 'react-chartjs-2';
+import {Pie} from 'react-chartjs-2';
 import CountUp from 'react-countup';
 
 import './Cards.css';
 
-const Cards = ({ data, value, index }) => {
+const Cards = ({data, value, index}) => {
   if (value !== index) return null;
-
   const {
     confirmed,
     recovered,
@@ -18,9 +17,7 @@ const Cards = ({ data, value, index }) => {
     deltarecovered,
   } = data && index === 1 && data.totData ? data.totData[0] : data;
 
-  if (!confirmed) {
-    return <Rotating />;
-  }
+  if (!confirmed) return <Rotating />;
 
   const pieChart = confirmed ? (
     <Pie
@@ -39,7 +36,11 @@ const Cards = ({ data, value, index }) => {
               recovered.value,
               deaths.value,
             ],
-            borderColor: ['rgba(187, 134, 252, 0.2)','rgba(0, 255, 0, 0.2)','rgba(255, 0, 0, 0.2)']
+            borderColor: [
+              'rgba(187, 134, 252, 0.2)',
+              'rgba(0, 255, 0, 0.2)',
+              'rgba(255, 0, 0, 0.2)',
+            ],
           },
         ],
       }}

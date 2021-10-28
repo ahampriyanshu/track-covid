@@ -1,11 +1,11 @@
 import SelectionTabs from './components/SelectionTabs/SelectionTabs.jsx';
-import { ThemeProvider, Paper } from '@material-ui/core';
+import {ThemeProvider, Paper} from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
-import { createMuiTheme } from '@material-ui/core/styles';
-import Radium, { StyleRoot } from 'radium';
-import React, { useState, Suspense, lazy } from 'react';
-import { zoomIn } from 'react-animations/';
+import {createMuiTheme} from '@material-ui/core/styles';
+import Radium, {StyleRoot} from 'radium';
+import React, {useState, Suspense, lazy} from 'react';
+import {zoomIn} from 'react-animations/';
 import * as Icon from 'react-feather';
 import './App.css';
 
@@ -28,7 +28,7 @@ function App() {
   const darkTheme = createMuiTheme({
     palette: {
       type: 'dark',
-      primary: { main: '#f2a365', contrastText: '#fff' },
+      primary: {main: '#f2a365', contrastText: '#fff'},
       background: {
         paper: '#161625',
       },
@@ -38,7 +38,7 @@ function App() {
   const lightTheme = createMuiTheme({
     palette: {
       type: 'light',
-      primary: { main: '#29c7ac', contrastText: '#fff' },
+      primary: {main: '#29c7ac', contrastText: '#fff'},
       background: {
         paper: 'white',
       },

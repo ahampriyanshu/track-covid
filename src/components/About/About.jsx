@@ -7,7 +7,7 @@ import {
   Grid,
   Typography,
   Link,
-  Box
+  Box,
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import {makeStyles} from '@material-ui/core/styles';
@@ -83,36 +83,36 @@ function Main() {
   return (
     <React.Fragment>
       <Box m={4}>
-      <Grid
-        container
-        spacing={6}
-        direction="row"
-        alignItems="center"
-        justify="center"
-        align="center"
-      >
-        <Grid item xs={12} spacing={3} md={3}>
-          <span className="main-span react-span">
-            <img src={react} alt="logo" className="react-logo" />
-            <br />
-            Built in React
-          </span>
+        <Grid
+          container
+          spacing={6}
+          direction="row"
+          alignItems="center"
+          justify="center"
+          align="center"
+        >
+          <Grid item xs={12} spacing={3} md={3}>
+            <span className="main-span react-span">
+              <img src={react} alt="logo" className="react-logo" />
+              <br />
+              Built in React
+            </span>
+          </Grid>
+          <Grid item xs={12} spacing={3} md={3}>
+            <span className="main-span mui-span">
+              <img src={mui} alt="logo" className="project-logo" />
+              <br />
+              Styled in MUI
+            </span>
+          </Grid>
+          <Grid item xs={12} spacing={3} md={3}>
+            <span className="main-span net-span">
+              <img src={net} alt="logo" className="project-logo" />
+              <br />
+              Hosted On Netlify
+            </span>
+          </Grid>
         </Grid>
-        <Grid item xs={12} spacing={3} md={3}>
-          <span className="main-span mui-span">
-            <img src={mui} alt="logo" className="project-logo" />
-            <br />
-            Styled in MUI
-          </span>
-        </Grid>
-        <Grid item xs={12} spacing={3} md={3}>
-          <span className="main-span net-span">
-            <img src={net} alt="logo" className="project-logo" />
-            <br />
-            Hosted On Netlify
-          </span>
-        </Grid>
-      </Grid>
       </Box>
       <Grid
         container

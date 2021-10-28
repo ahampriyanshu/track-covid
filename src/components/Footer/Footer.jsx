@@ -1,4 +1,4 @@
-import { Link, Grid } from '@material-ui/core/';
+import {Link, Grid} from '@material-ui/core/';
 import React from 'react';
 import * as Icon from 'react-feather';
 import './Footer.css';
@@ -16,16 +16,18 @@ const Footer = () => {
         align="center"
       >
         <Grid item xs={2} md={1}>
-          <Link color="inherit"
+          <Link
+            color="inherit"
             underline="none"
-            href="https://ahampriyanshu.github.io"
+            href="https://ahampriyanshu.com/"
           >
             {' '}
             <Icon.Link2 />{' '}
           </Link>
         </Grid>
         <Grid item xs={2} md={1}>
-          <Link color="inherit"
+          <Link
+            color="inherit"
             underline="none"
             href=" https://t.me/ahampriyanshu"
           >
@@ -34,7 +36,8 @@ const Footer = () => {
           </Link>
         </Grid>
         <Grid item xs={2} md={1}>
-          <Link color="inherit"
+          <Link
+            color="inherit"
             underline="none"
             href="mailto:ahampriyanshu@gmail.com"
           >
@@ -43,7 +46,8 @@ const Footer = () => {
           </Link>
         </Grid>
         <Grid item xs={2} md={1}>
-          <Link color="inherit"
+          <Link
+            color="inherit"
             underline="none"
             href="https://github.com/ahampriyanshu"
           >
@@ -52,7 +56,8 @@ const Footer = () => {
           </Link>
         </Grid>
         <Grid item xs={2} md={1}>
-          <Link color="inherit"
+          <Link
+            color="inherit"
             underline="none"
             href="https://www.linkedin.com/in/ahampriyanshu"
           >
