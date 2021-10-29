@@ -88,7 +88,7 @@ function Main() {
           spacing={6}
           direction="row"
           alignItems="center"
-          justify="center"
+          justifyContent="center"
           align="center"
         >
           <Grid item xs={12} spacing={3} md={3}>
@@ -119,7 +119,7 @@ function Main() {
         spacing={3}
         direction="row"
         alignItems="center"
-        justify="center"
+        justifyContent="center"
         align="center"
       >
         {tiers.map((tier) => (

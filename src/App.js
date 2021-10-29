@@ -1,11 +1,11 @@
 import SelectionTabs from './components/SelectionTabs/SelectionTabs.jsx';
+import React, {useState, Suspense, lazy} from 'react';
 import {ThemeProvider, Paper} from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
-import {createMuiTheme} from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import Radium, {StyleRoot} from 'radium';
-import React, {useState, Suspense, lazy} from 'react';
-import {zoomIn} from 'react-animations/';
+import {zoomIn} from 'react-animations';
 import * as Icon from 'react-feather';
 import './App.css';
 
@@ -25,7 +25,7 @@ function App() {
 
   const icon = darkMode ? <Icon.Sun /> : <Icon.Moon />;
 
-  const darkTheme = createMuiTheme({
+  const darkTheme = createTheme({
     palette: {
       type: 'dark',
       primary: {main: '#f2a365', contrastText: '#fff'},
@@ -35,7 +35,7 @@ function App() {
     },
   });
 
-  const lightTheme = createMuiTheme({
+  const lightTheme = createTheme({
     palette: {
       type: 'light',
       primary: {main: '#29c7ac', contrastText: '#fff'},

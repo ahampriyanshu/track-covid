@@ -6,13 +6,12 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <br />
       <Grid
         container
         spacing={2}
         direction="row"
         alignItems="center"
-        justify="center"
+        justifyContent="center"
         align="center"
       >
         <Grid item xs={2} md={1}>

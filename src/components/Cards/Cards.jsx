@@ -49,7 +49,7 @@ const Cards = ({data, value, index}) => {
 
   return (
     <div className="card-container">
-      <Grid container spacing={3} justify="center" className="grid-container">
+      <Grid container spacing={3} justifyContent="center" className="grid-container">
         <Grid
           item
           component={Card}
@@ -124,7 +124,7 @@ const Cards = ({data, value, index}) => {
         </Grid>
       </Grid>
       <br />
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <Grid item xs={12} md={6}>
           {pieChart}
         </Grid>

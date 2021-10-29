@@ -12,7 +12,7 @@ const buildSW = () => {
       // Optionally, log any warnings and details.
       warnings.forEach(console.warn);
       console.log(
-        `${count} files will be precached, totaling ${size / 1000} KBs.`
+        `${count} files will be precached, totaling ${size / 1024} KBs.`
       );
     })
     .catch(console.error);

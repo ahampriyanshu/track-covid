@@ -6,14 +6,11 @@
 
 Syntax of your commit should be :
 
-`added,fixed,updated,removed -> what have you changed => filename.ext`\
-For example\
- `added -> animation => Cards.jsx`\
- `fixed -> font size => Tables.jsx`
+* `added,fixed,updated,removed -> what have you changed => filename.ext`
 
 ## Areas that need improvement
 
-- lazy loading
+- Lazy loading
 - Fonts and colors
 - Darkmode and lightmode optimisation
-- react-animations
+- Animations

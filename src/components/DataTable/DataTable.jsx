@@ -135,15 +135,15 @@ const DataTable = ({data, value, index}) => {
   return (
     <div className="datatable-container">
       <Paper className="paper" elevation={0}>
-        <TableContainer className="random">
-          <Table className="table" size="small" stickyHeader>
-            <TableHead>
-              <TableRow>
+        <TableContainer  padding="normal" className="random">
+          <Table  padding="normal" className="table" size="small" stickyHeader>
+            <TableHead  padding="normal">
+              <TableRow  padding="normal">
                 {headCells.map((headCell) => (
                   <TableCell
                     key={headCell.id}
                     align={headCell.numeric ? 'right' : 'left'}
-                    padding={headCell.disablePadding ? 'none' : 'default'}
+                    padding={headCell.disablePadding ? 'none' : 'normal'}
                     sortDirection={orderBy === headCell.id ? order : false}
                     className="table-cell"
                   >
