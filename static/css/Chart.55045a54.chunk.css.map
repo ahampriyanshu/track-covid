@@ -1,0 +1,1 @@
+{"version":3,"sources":["Chart.css"],"names":[],"mappings":"AAAA,iBACE,YAAa,CACb,sBAAuB,CACvB,SACF,CAEA,yCACE,iBACE,SACF,CACF","file":"Chart.55045a54.chunk.css","sourcesContent":[".chart-container {\n  display: flex;\n  justify-content: center;\n  width: 60%;\n}\n\n@media only screen and (max-width: 770px) {\n  .chart-container {\n    width: 95%;\n  }\n}\n"]}

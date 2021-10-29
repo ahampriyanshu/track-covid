@@ -1,0 +1,1 @@
+{"version":3,"sources":["Footer.css"],"names":[],"mappings":"AAAA,kBACE,iBAAkB,CAClB,eAAgB,CAChB,uBACF","file":"Footer.607d1502.chunk.css","sourcesContent":[".footer-container {\n  text-align: center;\n  margin-top: none;\n  color: #757575 !important;\n}\n"]}
